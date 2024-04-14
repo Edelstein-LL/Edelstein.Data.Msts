@@ -1,0 +1,33 @@
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+
+namespace Edelstein.Data.Msts;
+
+[Serializable]
+public class SubscriptionImageMst : ISerializable
+{
+    [Key]
+    public uint Id { get; init; }
+
+    public required string MasterBillingProductId { get; init; }
+    public required string SubscriptionImageName { get; init; }
+    public uint MasterReleaseLabelId { get; init; }
+
+    public SubscriptionImageMst() { }
+
+    protected SubscriptionImageMst(SerializationInfo info, StreamingContext context)
+    {
+        Id = info.GetUInt32("_id");
+        MasterBillingProductId = info.GetString("_masterBillingProductId")!;
+        SubscriptionImageName = info.GetString("_subscriptionImageName")!;
+        MasterReleaseLabelId = info.GetUInt32("_masterReleaseLabelId");
+    }
+
+    public void GetObjectData(SerializationInfo info, StreamingContext context)
+    {
+        info.AddValue("_id", Id);
+        info.AddValue("_masterBillingProductId", MasterBillingProductId);
+        info.AddValue("_subscriptionImageName", SubscriptionImageName);
+        info.AddValue("_masterReleaseLabelId", MasterReleaseLabelId);
+    }
+}
