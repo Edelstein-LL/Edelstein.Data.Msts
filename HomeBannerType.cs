@@ -5,6 +5,7 @@ public enum HomeBannerType
     Lottery = 0,
     Event = 1,
     Shop = 2,
+    CustomizeShop = 3,
     Notice = 4,
     Campaign = 5,
     Mission = 6,

@@ -7,6 +7,7 @@ namespace Edelstein.Data.Msts;
 [Serializable]
 [PrimaryKey(nameof(Id), nameof(Number))]
 [Index(nameof(Id))]
+[Index(nameof(MasterLotteryItemId))]
 public class LotteryRarityMst : ISerializable
 {
     public uint Id { get; init; }

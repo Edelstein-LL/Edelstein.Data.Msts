@@ -6,5 +6,6 @@ public enum ObtainType
     Shop = 1,
     Mission = 2,
     Event = 3,
-    Story = 4
+    Story = 4,
+    PlayerRank = 5
 }
