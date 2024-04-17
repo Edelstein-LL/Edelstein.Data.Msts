@@ -15,6 +15,7 @@ public class StoryPartMst : ISerializable
     public uint MasterStoryRewardId { get; init; }
     public uint MasterMusicId { get; init; }
     public uint ScenarioId { get; init; }
+    public uint[] MovieIds { get; init; } = [];
     public required string ImageName { get; init; }
     public uint StampCharacterId { get; init; }
     public uint StoreReviewSetting { get; init; }
@@ -31,6 +32,7 @@ public class StoryPartMst : ISerializable
         MasterStoryRewardId = info.GetUInt32("_masterStoryRewardId");
         MasterMusicId = info.GetUInt32("_masterMusicId");
         ScenarioId = info.GetUInt32("_scenarioId");
+        MovieIds = (uint[])info.GetValue("_movieIds", typeof(uint[]))!;
         ImageName = info.GetString("_imageName")!;
         StampCharacterId = info.GetUInt32("_stampCharacterId");
         StoreReviewSetting = info.GetUInt32("_storeReviewSetting");
@@ -46,6 +48,7 @@ public class StoryPartMst : ISerializable
         info.AddValue("_masterStoryRewardId", MasterStoryRewardId);
         info.AddValue("_masterMusicId", MasterMusicId);
         info.AddValue("_scenarioId", ScenarioId);
+        info.AddValue("_movieIds", MovieIds);
         info.AddValue("_imageName", ImageName);
         info.AddValue("_stampCharacterId", StampCharacterId);
         info.AddValue("_storeReviewSetting", StoreReviewSetting);

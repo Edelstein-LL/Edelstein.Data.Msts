@@ -47,8 +47,8 @@ public class LiveMst : ISerializable
         MultiScoreS = info.GetInt32("_multiScoreS");
         LiveEffectValueId = info.GetInt32("_liveEffectValueId");
         Bpm = info.GetInt32("_bpm");
-        StartWait = (float)info.GetValue("_startWait", typeof(float))!;
-        EndWait = (float)info.GetValue("_endWait", typeof(float))!;
+        StartWait = info.GetSingle("_startWait");
+        EndWait = info.GetSingle("_endWait");
         MasterLiveRewardSettingId = info.GetUInt32("_masterLiveRewardSettingId");
         LiveBgMovieMasterId = info.GetUInt32("_liveBgMovieMasterId");
         RehearsalImagePath = info.GetString("_rehearsalImagePath")!;
@@ -81,4 +81,14 @@ public class LiveMst : ISerializable
         info.AddValue("_campaignFlag", CampaignFlag);
         info.AddValue("_masterReleaseLabelId", MasterReleaseLabelId);
     }
+
+    public int GetScoreByLetter(string letter) =>
+        letter switch
+        {
+            "C" => ScoreC,
+            "B" => ScoreB,
+            "A" => ScoreA,
+            "S" => ScoreS,
+            _ => throw new ArgumentOutOfRangeException(nameof(letter))
+        };
 }

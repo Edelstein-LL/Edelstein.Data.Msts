@@ -11,6 +11,7 @@ public class MultieventSettingMst : ISerializable
 
     public required string Name { get; init; }
     public EventType Type { get; init; }
+    public uint[] TargetGroupIds { get; init; } = [];
     public required CardType TargetType { get; init; }
     public uint LeftLiveButtonCharaId { get; init; }
     public uint RightLiveButtonCharaId { get; init; }
@@ -30,6 +31,7 @@ public class MultieventSettingMst : ISerializable
         EventId = info.GetUInt32("_eventId");
         Name = info.GetString("_name")!;
         Type = (EventType)info.GetValue("_type", typeof(EventType))!;
+        TargetGroupIds = (uint[])info.GetValue("_targetGroupIds", typeof(uint[]))!;
         TargetType = (CardType)info.GetValue("_targetType", typeof(CardType))!;
         LeftLiveButtonCharaId = info.GetUInt32("_leftLiveButtonCharaId");
         RightLiveButtonCharaId = info.GetUInt32("_rightLiveButtonCharaId");
@@ -48,6 +50,7 @@ public class MultieventSettingMst : ISerializable
         info.AddValue("_eventId", EventId);
         info.AddValue("_name", Name);
         info.AddValue("_type", Type);
+        info.AddValue("_targetGroupIds", TargetGroupIds);
         info.AddValue("_targetType", TargetType);
         info.AddValue("_leftLiveButtonCharaId", LeftLiveButtonCharaId);
         info.AddValue("_rightLiveButtonCharaId", RightLiveButtonCharaId);

@@ -11,6 +11,7 @@ public class LimitedLiveMst : ISerializable
 
     public required string NameMasterTextId { get; init; }
     public required string RuleFormatMasterTextId { get; init; }
+    public uint[] MasterLiveIdList { get; init; } = [];
     public uint BonusMasterLiveId { get; init; }
     public int BonusLiveLotteryRatio { get; init; }
     public required string BonusEffectMasterTextId { get; init; }
@@ -27,6 +28,7 @@ public class LimitedLiveMst : ISerializable
         Id = info.GetUInt32("_id");
         NameMasterTextId = info.GetString("_nameMasterTextId")!;
         RuleFormatMasterTextId = info.GetString("_ruleFormatMasterTextId")!;
+        MasterLiveIdList = (uint[])info.GetValue("_masterLiveIdList", typeof(uint[]))!;
         BonusMasterLiveId = info.GetUInt32("_bonusMasterLiveId");
         BonusLiveLotteryRatio = info.GetInt32("_bonusLiveLotteryRatio");
         BonusEffectMasterTextId = info.GetString("_bonusEffectMasterTextId")!;
@@ -42,6 +44,7 @@ public class LimitedLiveMst : ISerializable
         info.AddValue("_id", Id);
         info.AddValue("_nameMasterTextId", NameMasterTextId);
         info.AddValue("_ruleFormatMasterTextId", RuleFormatMasterTextId);
+        info.AddValue("_masterLiveIdList", MasterLiveIdList);
         info.AddValue("_bonusMasterLiveId", BonusMasterLiveId);
         info.AddValue("_bonusLiveLotteryRatio", BonusLiveLotteryRatio);
         info.AddValue("_bonusEffectMasterTextId", BonusEffectMasterTextId);

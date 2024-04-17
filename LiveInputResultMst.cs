@@ -23,9 +23,9 @@ public class LiveInputResultMst : ISerializable
     protected LiveInputResultMst(SerializationInfo info, StreamingContext context)
     {
         Type = (InputResultType)info.GetValue("_type", typeof(InputResultType))!;
-        OffsetTimeSec = (float)info.GetValue("_offsetTimeSec", typeof(float))!;
-        OffsetTimeSecSlider = (float)info.GetValue("_offsetTimeSecSlider", typeof(float))!;
-        ScoreCoeff = (float)info.GetValue("_scoreCoeff", typeof(float))!;
+        OffsetTimeSec = info.GetSingle("_offsetTimeSec");
+        OffsetTimeSecSlider = info.GetSingle("_offsetTimeSecSlider");
+        ScoreCoeff = info.GetSingle("_scoreCoeff");
         LifeDamage = info.GetInt32("_lifeDamage");
         MidpointLifeDamage = info.GetInt32("_midpointLifeDamage");
         BombLifeDamage = info.GetInt32("_bombLifeDamage");

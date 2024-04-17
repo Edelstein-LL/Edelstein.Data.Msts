@@ -11,6 +11,7 @@ public class EvolveItemConditionMst : ISerializable
 
     public uint Number { get; init; }
     public EvolveItemConditionType Type { get; init; }
+    public uint[] ValueList { get; init; } = [];
     public uint MasterReleaseLabelId { get; init; }
 
     public EvolveItemConditionMst() { }
@@ -20,6 +21,7 @@ public class EvolveItemConditionMst : ISerializable
         MasterItemId = info.GetUInt32("_masterItemId");
         Number = info.GetUInt32("_number");
         Type = (EvolveItemConditionType)info.GetValue("_type", typeof(EvolveItemConditionType))!;
+        ValueList = (uint[])info.GetValue("_valueList", typeof(uint[]))!;
         MasterReleaseLabelId = info.GetUInt32("_masterReleaseLabelId");
     }
 
@@ -28,6 +30,7 @@ public class EvolveItemConditionMst : ISerializable
         info.AddValue("_masterItemId", MasterItemId);
         info.AddValue("_number", Number);
         info.AddValue("_type", Type);
+        info.AddValue("_valueList", ValueList);
         info.AddValue("_masterReleaseLabelId", MasterReleaseLabelId);
     }
 }

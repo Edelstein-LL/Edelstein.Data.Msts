@@ -11,6 +11,7 @@ public class DialogMst : ISerializable
 
     public required string Title { get; init; }
     public required string Message { get; init; }
+    public string[] ButtonId { get; init; } = [];
     public uint MasterReleaseLabelId { get; init; }
 
     public DialogMst() { }
@@ -20,6 +21,7 @@ public class DialogMst : ISerializable
         Id = info.GetString("_id")!;
         Title = info.GetString("_title")!;
         Message = info.GetString("_message")!;
+        ButtonId = (string[])info.GetValue("_buttonId", typeof(string[]))!;
         MasterReleaseLabelId = info.GetUInt32("_masterReleaseLabelId");
     }
 
@@ -28,6 +30,7 @@ public class DialogMst : ISerializable
         info.AddValue("_id", Id);
         info.AddValue("_title", Title);
         info.AddValue("_message", Message);
+        info.AddValue("_buttonId", ButtonId);
         info.AddValue("_masterReleaseLabelId", MasterReleaseLabelId);
     }
 }

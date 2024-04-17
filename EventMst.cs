@@ -14,9 +14,11 @@ public class EventMst : ISerializable
     public MemberRankingType MemberRankingType { get; init; }
     public required string ResultClosedDate { get; init; }
     public required string AggregationDate { get; init; }
+    public uint[] RewardMemberMasterCardIdList { get; init; } = [];
     public uint MasterEventPointSettingsId { get; init; }
     public required string OpeningObjName { get; init; }
     public BandCategory OpeningGroupBg { get; init; }
+    public uint[] FavoriteMemberSettingCharacterIds { get; init; } = [];
     public uint MasterReleaseLabelId { get; init; }
 
     public EventMst() { }
@@ -29,9 +31,11 @@ public class EventMst : ISerializable
         MemberRankingType = (MemberRankingType)info.GetValue("_memberRankingType", typeof(MemberRankingType))!;
         ResultClosedDate = info.GetString("_resultClosedDate")!;
         AggregationDate = info.GetString("_aggregationDate")!;
+        RewardMemberMasterCardIdList = (uint[])info.GetValue("_rewardMemberMasterCardIdList", typeof(uint[]))!;
         MasterEventPointSettingsId = info.GetUInt32("_masterEventPointSettingsId");
         OpeningObjName = info.GetString("_openingObjName")!;
         OpeningGroupBg = (BandCategory)info.GetValue("_openingGroupBg", typeof(BandCategory))!;
+        FavoriteMemberSettingCharacterIds = (uint[])info.GetValue("_favoriteMemberSettingCharacterIds", typeof(uint[]))!;
         MasterReleaseLabelId = info.GetUInt32("_masterReleaseLabelId");
     }
 
@@ -43,9 +47,11 @@ public class EventMst : ISerializable
         info.AddValue("_memberRankingType", MemberRankingType);
         info.AddValue("_resultClosedDate", ResultClosedDate);
         info.AddValue("_aggregationDate", AggregationDate);
+        info.AddValue("_rewardMemberMasterCardIdList", RewardMemberMasterCardIdList);
         info.AddValue("_masterEventPointSettingsId", MasterEventPointSettingsId);
         info.AddValue("_openingObjName", OpeningObjName);
         info.AddValue("_openingGroupBg", OpeningGroupBg);
+        info.AddValue("_favoriteMemberSettingCharacterIds", FavoriteMemberSettingCharacterIds);
         info.AddValue("_masterReleaseLabelId", MasterReleaseLabelId);
     }
 }

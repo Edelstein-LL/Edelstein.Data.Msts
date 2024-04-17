@@ -30,10 +30,10 @@ public class MusicLevelMst : ISerializable
         NoteDataFileName = info.GetString("_noteDataFileName")!;
         FullCombo = info.GetInt32("_fullCombo");
         BeforeClimaxNotesCount = info.GetInt32("_beforeClimaxNotesCount");
-        ScoreCoeff = (float)info.GetValue("_scoreCoeff", typeof(float))!;
-        ClimaxScoreCoeff = (float)info.GetValue("_climaxScoreCoeff", typeof(float))!;
-        VoltageIncreaseCoeff = (float)info.GetValue("_voltageIncreaseCoeff", typeof(float))!;
-        VoltageDecreaseCoeff = (float)info.GetValue("_voltageDecreaseCoeff", typeof(float))!;
+        ScoreCoeff = info.GetSingle("_scoreCoeff");
+        ClimaxScoreCoeff = info.GetSingle("_climaxScoreCoeff");
+        VoltageIncreaseCoeff = info.GetSingle("_voltageIncreaseCoeff");
+        VoltageDecreaseCoeff = info.GetSingle("_voltageDecreaseCoeff");
         MasterReleaseLabelId = info.GetUInt32("_masterReleaseLabelId");
     }
 

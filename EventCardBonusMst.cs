@@ -10,6 +10,8 @@ public class EventCardBonusMst : ISerializable
 {
     public uint MasterEventId { get; init; }
     public uint TargetId { get; init; }
+    public int[] PointBonusRatioList { get; init; } = [];
+    public int[] EventTicketBonusAmountList { get; init; } = [];
     public uint MasterReleaseLabelId { get; init; }
 
     public EventCardBonusMst() { }
@@ -18,6 +20,8 @@ public class EventCardBonusMst : ISerializable
     {
         MasterEventId = info.GetUInt32("_masterEventId");
         TargetId = info.GetUInt32("_targetId");
+        PointBonusRatioList = (int[])info.GetValue("_pointBonusRatioList", typeof(int[]))!;
+        EventTicketBonusAmountList = (int[])info.GetValue("_eventTicketBonusAmountList", typeof(int[]))!;
         MasterReleaseLabelId = info.GetUInt32("_masterReleaseLabelId");
     }
 
@@ -25,6 +29,8 @@ public class EventCardBonusMst : ISerializable
     {
         info.AddValue("_masterEventId", MasterEventId);
         info.AddValue("_targetId", TargetId);
+        info.AddValue("_pointBonusRatioList", PointBonusRatioList);
+        info.AddValue("_eventTicketBonusAmountList", EventTicketBonusAmountList);
         info.AddValue("_masterReleaseLabelId", MasterReleaseLabelId);
     }
 }

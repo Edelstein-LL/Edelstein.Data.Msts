@@ -17,7 +17,7 @@ public class LiveComboMst : ISerializable
     protected LiveComboMst(SerializationInfo info, StreamingContext context)
     {
         ComboNum = info.GetInt32("_comboNum");
-        ScoreUpRate = (float)info.GetValue("_scoreUpRate", typeof(float))!;
+        ScoreUpRate = info.GetSingle("_scoreUpRate");
         MasterReleaseLabelId = info.GetUInt32("_masterReleaseLabelId");
     }
 

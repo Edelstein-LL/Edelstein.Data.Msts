@@ -14,6 +14,7 @@ public class MissionMst : ISerializable
     public MissionType Type { get; init; }
     public uint ParentMasterMissionId { get; init; }
     public MissionConditionType ConditionType { get; init; }
+    public uint[] ConditionValues { get; init; } = [];
     public int ConditionNumber { get; init; }
     public uint MasterMissionRewardId { get; init; }
     public int Priority { get; init; }
@@ -29,6 +30,7 @@ public class MissionMst : ISerializable
         Type = (MissionType)info.GetValue("_type", typeof(MissionType))!;
         ParentMasterMissionId = info.GetUInt32("_parentMasterMissionId");
         ConditionType = (MissionConditionType)info.GetValue("_conditionType", typeof(MissionConditionType))!;
+        ConditionValues = (uint[])info.GetValue("_conditionValues", typeof(uint[]))!;
         ConditionNumber = info.GetInt32("_conditionNumber");
         MasterMissionRewardId = info.GetUInt32("_masterMissionRewardId");
         Priority = info.GetInt32("_priority");
@@ -43,6 +45,7 @@ public class MissionMst : ISerializable
         info.AddValue("_type", Type);
         info.AddValue("_parentMasterMissionId", ParentMasterMissionId);
         info.AddValue("_conditionType", ConditionType);
+        info.AddValue("_conditionValues", ConditionValues);
         info.AddValue("_conditionNumber", ConditionNumber);
         info.AddValue("_masterMissionRewardId", MasterMissionRewardId);
         info.AddValue("_priority", Priority);

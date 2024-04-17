@@ -9,6 +9,7 @@ public class WipePlayListMst : ISerializable
     [Key]
     public uint Id { get; init; }
 
+    public uint[] WipeIdList { get; init; } = [];
     public uint MasterReleaseLabelId { get; init; }
 
     public WipePlayListMst() { }
@@ -16,12 +17,14 @@ public class WipePlayListMst : ISerializable
     protected WipePlayListMst(SerializationInfo info, StreamingContext context)
     {
         Id = info.GetUInt32("_id");
+        WipeIdList = (uint[])info.GetValue("_wipeIdList", typeof(uint[]))!;
         MasterReleaseLabelId = info.GetUInt32("_masterReleaseLabelId");
     }
 
     public void GetObjectData(SerializationInfo info, StreamingContext context)
     {
         info.AddValue("_id", Id);
+        info.AddValue("_wipeIdList", WipeIdList);
         info.AddValue("_masterReleaseLabelId", MasterReleaseLabelId);
     }
 }

@@ -12,10 +12,14 @@ public class NewSkillMst : ISerializable
     public required string Name { get; init; }
     public required string DetailText { get; init; }
     public SkillMainTriggerType Trigger { get; init; }
+    public uint[] TriggerValue { get; init; } = [];
+    public uint[] Probability { get; init; } = [];
+    public uint[] EffectiveMilliSecs { get; init; } = [];
     public SkillSubTargetType SubTarget { get; init; }
     public uint TargetGroupId { get; init; }
     public uint TargetSchoolGrade { get; init; }
     public SkillMainEffectType EffectType { get; init; }
+    public uint[] EffectiveValues { get; init; } = [];
     public uint MasterReleaseLabelId { get; init; }
 
     public NewSkillMst() { }
@@ -26,10 +30,14 @@ public class NewSkillMst : ISerializable
         Name = info.GetString("_name")!;
         DetailText = info.GetString("_detailText")!;
         Trigger = (SkillMainTriggerType)info.GetValue("_trigger", typeof(SkillMainTriggerType))!;
+        TriggerValue = (uint[])info.GetValue("_triggerValue", typeof(uint[]))!;
+        Probability = (uint[])info.GetValue("_probability", typeof(uint[]))!;
+        EffectiveMilliSecs = (uint[])info.GetValue("_effectiveMilliSecs", typeof(uint[]))!;
         SubTarget = (SkillSubTargetType)info.GetValue("_subTarget", typeof(SkillSubTargetType))!;
         TargetGroupId = info.GetUInt32("_targetGroupId");
         TargetSchoolGrade = info.GetUInt32("_targetSchoolGrade");
         EffectType = (SkillMainEffectType)info.GetValue("_effectType", typeof(SkillMainEffectType))!;
+        EffectiveValues = (uint[])info.GetValue("_effectiveValues", typeof(uint[]))!;
         MasterReleaseLabelId = info.GetUInt32("_masterReleaseLabelId");
     }
 
@@ -39,10 +47,14 @@ public class NewSkillMst : ISerializable
         info.AddValue("_name", Name);
         info.AddValue("_detailText", DetailText);
         info.AddValue("_trigger", Trigger);
+        info.AddValue("_triggerValue", TriggerValue);
+        info.AddValue("_probability", Probability);
+        info.AddValue("_effectiveMilliSecs", EffectiveMilliSecs);
         info.AddValue("_subTarget", SubTarget);
         info.AddValue("_targetGroupId", TargetGroupId);
         info.AddValue("_targetSchoolGrade", TargetSchoolGrade);
         info.AddValue("_effectType", EffectType);
+        info.AddValue("_effectiveValues", EffectiveValues);
         info.AddValue("_masterReleaseLabelId", MasterReleaseLabelId);
     }
 }
