@@ -1,9 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
+[Index(nameof(Exp))]
 public class UserRankMst : ISerializable
 {
     [Key]
