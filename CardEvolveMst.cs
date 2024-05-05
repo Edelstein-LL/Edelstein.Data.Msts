@@ -1,9 +1,11 @@
-using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
+
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
+[PrimaryKey(nameof(Rarity), nameof(EvolveCount))]
 public class CardEvolveMst : ISerializable
 {
     public Rarity Rarity { get; set; }

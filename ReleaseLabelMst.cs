@@ -13,7 +13,7 @@ public class ReleaseLabelMst : ISerializable
     public uint ReleaseStatus { get; set; }
     public required string Scope { get; set; }
     public required string OpenedAt { get; set; }
-    public required string ClosedAt { get; set; }
+    public string? ClosedAt { get; set; }
 
     public ReleaseLabelMst() { }
 
