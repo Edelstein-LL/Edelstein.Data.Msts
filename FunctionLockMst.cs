@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class FunctionLockMst : ISerializable
 {
     [Key]
-    public required string Id { get; init; }
+    public required string Id { get; set; }
 
-    public int Locked { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int Locked { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public FunctionLockMst() { }
 

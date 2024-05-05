@@ -7,14 +7,14 @@ namespace Edelstein.Data.Msts;
 public class LiveRewardMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint Number { get; init; }
-    public RewardType Type { get; init; }
-    public uint Value { get; init; }
-    public int Level { get; init; }
-    public int Amount { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Number { get; set; }
+    public RewardType Type { get; set; }
+    public uint Value { get; set; }
+    public int Level { get; set; }
+    public int Amount { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveRewardMst() { }
 

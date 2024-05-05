@@ -7,13 +7,13 @@ namespace Edelstein.Data.Msts;
 public class HomeBgMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string ImageName { get; init; }
-    public uint MasterMovieId { get; init; }
-    public HomeBgType HomeBgType { get; init; }
-    public int Priority { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string ImageName { get; set; }
+    public uint MasterMovieId { get; set; }
+    public HomeBgType HomeBgType { get; set; }
+    public int Priority { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public HomeBgMst() { }
 

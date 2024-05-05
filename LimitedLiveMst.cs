@@ -7,19 +7,19 @@ namespace Edelstein.Data.Msts;
 public class LimitedLiveMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string NameMasterTextId { get; init; }
-    public required string RuleFormatMasterTextId { get; init; }
-    public uint[] MasterLiveIdList { get; init; } = [];
-    public uint BonusMasterLiveId { get; init; }
-    public int BonusLiveLotteryRatio { get; init; }
-    public required string BonusEffectMasterTextId { get; init; }
-    public int Count { get; init; }
-    public uint MasterItemId { get; init; }
-    public int Priority { get; init; }
-    public TimeResetType TimeResetType { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string NameMasterTextId { get; set; }
+    public required string RuleFormatMasterTextId { get; set; }
+    public uint[] MasterLiveIdList { get; set; } = [];
+    public uint BonusMasterLiveId { get; set; }
+    public int BonusLiveLotteryRatio { get; set; }
+    public required string BonusEffectMasterTextId { get; set; }
+    public int Count { get; set; }
+    public uint MasterItemId { get; set; }
+    public int Priority { get; set; }
+    public TimeResetType TimeResetType { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LimitedLiveMst() { }
 

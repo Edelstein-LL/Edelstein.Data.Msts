@@ -7,16 +7,16 @@ namespace Edelstein.Data.Msts;
 public class AlbumUnitTypeMst : ISerializable
 {
     [Key]
-    public uint UnitTypeId { get; init; }
+    public uint UnitTypeId { get; set; }
 
-    public required string Name { get; init; }
-    public required string NameAlpha { get; init; }
-    public required string Age { get; init; }
-    public required string Birthday { get; init; }
-    public required string BloodType { get; init; }
-    public required string Height { get; init; }
-    public required string Cv { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public required string NameAlpha { get; set; }
+    public required string Age { get; set; }
+    public required string Birthday { get; set; }
+    public required string BloodType { get; set; }
+    public required string Height { get; set; }
+    public required string Cv { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public AlbumUnitTypeMst() { }
 

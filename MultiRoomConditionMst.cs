@@ -7,15 +7,15 @@ namespace Edelstein.Data.Msts;
 public class MultiRoomConditionMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint Number { get; init; }
-    public required uint[] Values { get; init; }
-    public int Amount { get; init; }
-    public uint CompareType { get; init; }
-    public required string ConditionDetail { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
-    public MultiConditionType MultiConditionType { get; init; }
+    public uint Number { get; set; }
+    public required uint[] Values { get; set; }
+    public int Amount { get; set; }
+    public uint CompareType { get; set; }
+    public required string ConditionDetail { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
+    public MultiConditionType MultiConditionType { get; set; }
 
     public MultiRoomConditionMst() { }
 

@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class MultieventMatchingrangeMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint MatchingDiffPer { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MatchingDiffPer { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public MultieventMatchingrangeMst() { }
 

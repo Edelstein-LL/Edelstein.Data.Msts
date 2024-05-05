@@ -7,15 +7,15 @@ namespace Edelstein.Data.Msts;
 public class ChatMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Title { get; init; }
-    public uint Type { get; init; }
-    public BandCategory Category { get; init; }
-    public uint ChatCharaId { get; init; }
-    public required string BgColorCode { get; init; }
-    public required string HeaderColorCode { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Title { get; set; }
+    public uint Type { get; set; }
+    public BandCategory Category { get; set; }
+    public uint ChatCharaId { get; set; }
+    public required string BgColorCode { get; set; }
+    public required string HeaderColorCode { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public ChatMst() { }
 

@@ -7,17 +7,17 @@ namespace Edelstein.Data.Msts;
 public class LiveTapSeMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint TapPerfectSoundId { get; init; }
-    public uint TapGrateSoundId { get; init; }
-    public uint TapGoodSoundId { get; init; }
-    public uint TapBadSoundId { get; init; }
-    public uint TapMissSoundId { get; init; }
-    public uint FlickSoundId { get; init; }
-    public uint TapLongSoundId { get; init; }
-    public uint TapEmptySoundId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint TapPerfectSoundId { get; set; }
+    public uint TapGrateSoundId { get; set; }
+    public uint TapGoodSoundId { get; set; }
+    public uint TapBadSoundId { get; set; }
+    public uint TapMissSoundId { get; set; }
+    public uint FlickSoundId { get; set; }
+    public uint TapLongSoundId { get; set; }
+    public uint TapEmptySoundId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveTapSeMst() { }
 

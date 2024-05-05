@@ -7,15 +7,15 @@ namespace Edelstein.Data.Msts;
 public class BillingShopMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string TabName { get; init; }
-    public required string Name { get; init; }
-    public int Priority { get; init; }
-    public int ShopType { get; init; }
-    public required string SpriteName { get; init; }
-    public uint MasterShopRewardId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string TabName { get; set; }
+    public required string Name { get; set; }
+    public int Priority { get; set; }
+    public int ShopType { get; set; }
+    public required string SpriteName { get; set; }
+    public uint MasterShopRewardId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public BillingShopMst() { }
 

@@ -8,10 +8,10 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(Id), nameof(Level))]
 public class CardSkillLevelMst : ISerializable
 {
-    public uint Id { get; init; }
-    public int Level { get; init; }
-    public int Exp { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Id { get; set; }
+    public int Level { get; set; }
+    public int Exp { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public CardSkillLevelMst() { }
 

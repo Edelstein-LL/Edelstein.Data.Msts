@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class MembershipWallpaperMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint Priorily { get; init; }
-    public MembershipWallpaperConditionType MembershipWallpaperConditionType { get; init; }
-    public uint Value { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Priorily { get; set; }
+    public MembershipWallpaperConditionType MembershipWallpaperConditionType { get; set; }
+    public uint Value { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public MembershipWallpaperMst() { }
 

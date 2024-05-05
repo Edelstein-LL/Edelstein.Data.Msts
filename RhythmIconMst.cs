@@ -7,11 +7,11 @@ namespace Edelstein.Data.Msts;
 public class RhythmIconMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public required string AtlasName { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public required string AtlasName { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public RhythmIconMst() { }
 

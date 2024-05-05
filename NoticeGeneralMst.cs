@@ -7,14 +7,14 @@ namespace Edelstein.Data.Msts;
 public class NoticeGeneralMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public LoginNoticePhase Phase { get; init; }
-    public required string NavigationTitle { get; init; }
-    public uint MasterNoticeRewardId { get; init; }
-    public uint DisplayableTime { get; init; }
-    public uint DisplayableExpireTime { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public LoginNoticePhase Phase { get; set; }
+    public required string NavigationTitle { get; set; }
+    public uint MasterNoticeRewardId { get; set; }
+    public uint DisplayableTime { get; set; }
+    public uint DisplayableExpireTime { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public NoticeGeneralMst() { }
 

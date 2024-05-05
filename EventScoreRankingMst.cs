@@ -8,13 +8,13 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterEventId), nameof(Number))]
 public class EventScoreRankingMst : ISerializable
 {
-    public uint MasterEventId { get; init; }
-    public uint GroupCount { get; init; }
-    public uint Number { get; init; }
-    public uint HighRank { get; init; }
-    public uint LowRank { get; init; }
-    public uint MasterEventScoreRankingRewardId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterEventId { get; set; }
+    public uint GroupCount { get; set; }
+    public uint Number { get; set; }
+    public uint HighRank { get; set; }
+    public uint LowRank { get; set; }
+    public uint MasterEventScoreRankingRewardId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public EventScoreRankingMst() { }
 

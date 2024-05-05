@@ -7,25 +7,25 @@ namespace Edelstein.Data.Msts;
 public class CharacterMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public required string NameRuby { get; init; }
-    public required string DetailText { get; init; }
-    public BandCategory Category { get; init; }
-    public uint SchoolGrade { get; init; }
-    public uint CharaCategory { get; init; }
-    public uint MasterGroupId { get; init; }
-    public required string SpriteName { get; init; }
-    public int DisplayOrder { get; init; }
-    public required string Height { get; init; }
-    public required string BloodType { get; init; }
-    public required string Birsday { get; init; }
-    public required string VoiceActor { get; init; }
-    public required string ImageColor { get; init; }
-    public required string ImageColorDark { get; init; }
-    public required string NameRichtextGacha { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public required string NameRuby { get; set; }
+    public required string DetailText { get; set; }
+    public BandCategory Category { get; set; }
+    public uint SchoolGrade { get; set; }
+    public uint CharaCategory { get; set; }
+    public uint MasterGroupId { get; set; }
+    public required string SpriteName { get; set; }
+    public int DisplayOrder { get; set; }
+    public required string Height { get; set; }
+    public required string BloodType { get; set; }
+    public required string Birsday { get; set; }
+    public required string VoiceActor { get; set; }
+    public required string ImageColor { get; set; }
+    public required string ImageColorDark { get; set; }
+    public required string NameRichtextGacha { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public CharacterMst() { }
 

@@ -8,9 +8,9 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(CharacterId), nameof(GroupId))]
 public class CharacterGroupMst : ISerializable
 {
-    public uint CharacterId { get; init; }
-    public uint GroupId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint CharacterId { get; set; }
+    public uint GroupId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public CharacterGroupMst() { }
 

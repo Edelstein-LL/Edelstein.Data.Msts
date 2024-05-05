@@ -7,14 +7,14 @@ namespace Edelstein.Data.Msts;
 public class LotteryImageMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint Number { get; init; }
-    public required string LogoFileName { get; init; }
-    public required string InfoFileName { get; init; }
-    public string[] StepupInfoFileName { get; init; } = [];
-    public string[] BgFileName { get; init; } = [];
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Number { get; set; }
+    public required string LogoFileName { get; set; }
+    public required string InfoFileName { get; set; }
+    public string[] StepupInfoFileName { get; set; } = [];
+    public string[] BgFileName { get; set; } = [];
+    public uint MasterReleaseLabelId { get; set; }
 
     public LotteryImageMst() { }
 

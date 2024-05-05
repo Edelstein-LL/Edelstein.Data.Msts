@@ -7,15 +7,15 @@ namespace Edelstein.Data.Msts;
 public class HomeBannerMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public HomeBannerType Type { get; init; }
-    public required string Value { get; init; }
-    public int DeviceType { get; init; }
-    public required string SpriteName { get; init; }
-    public int Position { get; init; }
-    public int Priority { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public HomeBannerType Type { get; set; }
+    public required string Value { get; set; }
+    public int DeviceType { get; set; }
+    public required string SpriteName { get; set; }
+    public int Position { get; set; }
+    public int Priority { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public HomeBannerMst() { }
 

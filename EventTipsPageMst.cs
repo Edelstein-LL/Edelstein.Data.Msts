@@ -8,11 +8,11 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterEventId), nameof(SpriteName))]
 public class EventTipsPageMst : ISerializable
 {
-    public uint MasterEventId { get; init; }
-    public required string SpriteName { get; init; }
-    public required string Message { get; init; }
-    public required string Category { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterEventId { get; set; }
+    public required string SpriteName { get; set; }
+    public required string Message { get; set; }
+    public required string Category { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public EventTipsPageMst() { }
 

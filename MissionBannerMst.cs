@@ -7,11 +7,11 @@ namespace Edelstein.Data.Msts;
 public class MissionBannerMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public MissionType Type { get; init; }
-    public required string BannerFileName { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public MissionType Type { get; set; }
+    public required string BannerFileName { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public MissionBannerMst() { }
 

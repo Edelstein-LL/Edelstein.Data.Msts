@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class PresetBackgroundMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public PresetBackgroundType Type { get; init; }
-    public required string Filename { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public PresetBackgroundType Type { get; set; }
+    public required string Filename { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public PresetBackgroundMst() { }
 

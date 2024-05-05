@@ -7,17 +7,17 @@ namespace Edelstein.Data.Msts;
 public class LiveBoostMst : ISerializable
 {
     [Key]
-    public int Value { get; init; }
+    public int Value { get; set; }
 
-    public int Lp { get; init; }
-    public int Icon { get; init; }
-    public int EventPointRatio { get; init; }
-    public int RewardRatio { get; init; }
-    public int ExpRatio { get; init; }
-    public int EventPointRatioAuto { get; init; }
-    public int RewardRatioAuto { get; init; }
-    public int ExpRatioAuto { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int Lp { get; set; }
+    public int Icon { get; set; }
+    public int EventPointRatio { get; set; }
+    public int RewardRatio { get; set; }
+    public int ExpRatio { get; set; }
+    public int EventPointRatioAuto { get; set; }
+    public int RewardRatioAuto { get; set; }
+    public int ExpRatioAuto { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveBoostMst() { }
 

@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class EvolveItemAmountMst : ISerializable
 {
     [Key]
-    public Rarity Rarity { get; init; }
+    public Rarity Rarity { get; set; }
 
-    public int EvolveCount { get; init; }
-    public ItemEffectType EffectType { get; init; }
-    public int Amount { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int EvolveCount { get; set; }
+    public ItemEffectType EffectType { get; set; }
+    public int Amount { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public EvolveItemAmountMst() { }
 

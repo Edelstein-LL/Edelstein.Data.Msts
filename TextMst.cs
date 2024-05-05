@@ -7,11 +7,11 @@ namespace Edelstein.Data.Msts;
 public class TextMst : ISerializable
 {
     [Key]
-    public required string Id { get; init; }
+    public required string Id { get; set; }
 
-    public required string TextJa { get; init; }
-    public required string TextEn { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string TextJa { get; set; }
+    public required string TextEn { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public TextMst() { }
 

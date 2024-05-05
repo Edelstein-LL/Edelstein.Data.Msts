@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class NoticeGachaMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string SpriteName { get; init; }
-    public required string TextSpriteName { get; init; }
-    public required string EfTextSpriteName { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string SpriteName { get; set; }
+    public required string TextSpriteName { get; set; }
+    public required string EfTextSpriteName { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public NoticeGachaMst() { }
 

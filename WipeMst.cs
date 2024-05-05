@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class WipeMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string PrefabPath { get; init; }
-    public required string ReadySeKey { get; init; }
-    public required string WipeSeKey { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string PrefabPath { get; set; }
+    public required string ReadySeKey { get; set; }
+    public required string WipeSeKey { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public WipeMst() { }
 

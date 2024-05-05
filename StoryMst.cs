@@ -7,16 +7,16 @@ namespace Edelstein.Data.Msts;
 public class StoryMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public StoryType Type { get; init; }
-    public uint MasterGroupId { get; init; }
-    public uint SeasonNumber { get; init; }
-    public uint ChapterNumber { get; init; }
-    public required string Name { get; init; }
-    public required string Summary { get; init; }
-    public required string ImageName { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public StoryType Type { get; set; }
+    public uint MasterGroupId { get; set; }
+    public uint SeasonNumber { get; set; }
+    public uint ChapterNumber { get; set; }
+    public required string Name { get; set; }
+    public required string Summary { get; set; }
+    public required string ImageName { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public StoryMst() { }
 

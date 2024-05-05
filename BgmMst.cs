@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class BgmMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint Num { get; init; }
-    public required string CueSheetName { get; init; }
-    public required string CueName { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Num { get; set; }
+    public required string CueSheetName { get; set; }
+    public required string CueName { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public BgmMst() { }
 

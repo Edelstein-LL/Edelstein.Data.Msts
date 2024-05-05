@@ -8,9 +8,9 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterEventId), nameof(MasterLiveId))]
 public class EventLiveMst : ISerializable
 {
-    public uint MasterEventId { get; init; }
-    public uint MasterLiveId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterEventId { get; set; }
+    public uint MasterLiveId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public EventLiveMst() { }
 

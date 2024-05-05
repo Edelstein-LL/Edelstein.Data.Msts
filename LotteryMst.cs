@@ -7,27 +7,27 @@ namespace Edelstein.Data.Msts;
 public class LotteryMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public uint MasterLotteryInfoId { get; init; }
-    public uint MasterCautionId { get; init; }
-    public uint Category { get; init; }
-    public LotteryType Type { get; init; }
-    public int Priority { get; init; }
-    public uint MasterLotteryPriceId { get; init; }
-    public uint MasterLotteryRarityId { get; init; }
-    public uint MasterLotteryImageId { get; init; }
-    public required string BalloonSpriteName { get; init; }
-    public uint StartdashTime { get; init; }
-    public uint StartdashExpireTime { get; init; }
-    public uint CheckDisplayableLottery { get; init; }
-    public uint Repeat { get; init; }
-    public uint ExchangeMasterItemId { get; init; }
-    public uint MasterLotteryEffMovieId { get; init; }
-    public uint MasterLotteryEffMovieRatioId { get; init; }
-    public uint StoreReviewFlag { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public uint MasterLotteryInfoId { get; set; }
+    public uint MasterCautionId { get; set; }
+    public uint Category { get; set; }
+    public LotteryType Type { get; set; }
+    public int Priority { get; set; }
+    public uint MasterLotteryPriceId { get; set; }
+    public uint MasterLotteryRarityId { get; set; }
+    public uint MasterLotteryImageId { get; set; }
+    public required string BalloonSpriteName { get; set; }
+    public uint StartdashTime { get; set; }
+    public uint StartdashExpireTime { get; set; }
+    public uint CheckDisplayableLottery { get; set; }
+    public uint Repeat { get; set; }
+    public uint ExchangeMasterItemId { get; set; }
+    public uint MasterLotteryEffMovieId { get; set; }
+    public uint MasterLotteryEffMovieRatioId { get; set; }
+    public uint StoreReviewFlag { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LotteryMst() { }
 

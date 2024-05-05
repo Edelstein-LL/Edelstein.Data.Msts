@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class DialogMst : ISerializable
 {
     [Key]
-    public required string Id { get; init; }
+    public required string Id { get; set; }
 
-    public required string Title { get; init; }
-    public required string Message { get; init; }
-    public string[] ButtonId { get; init; } = [];
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Title { get; set; }
+    public required string Message { get; set; }
+    public string[] ButtonId { get; set; } = [];
+    public uint MasterReleaseLabelId { get; set; }
 
     public DialogMst() { }
 

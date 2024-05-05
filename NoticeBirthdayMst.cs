@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class NoticeBirthdayMst : ISerializable
 {
     [Key]
-    public uint MasterNoticeGeneralId { get; init; }
+    public uint MasterNoticeGeneralId { get; set; }
 
-    public uint MasterCharacterId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterCharacterId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public NoticeBirthdayMst() { }
 

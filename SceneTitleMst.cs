@@ -7,11 +7,11 @@ namespace Edelstein.Data.Msts;
 public class SceneTitleMst : ISerializable
 {
     [Key]
-    public required string Id { get; init; }
+    public required string Id { get; set; }
 
-    public required string MainTitle { get; init; }
-    public required string MainMasterNavigationId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string MainTitle { get; set; }
+    public required string MainMasterNavigationId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public SceneTitleMst() { }
 

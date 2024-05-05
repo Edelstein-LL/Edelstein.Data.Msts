@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class ResultCodeMst : ISerializable
 {
     [Key]
-    public ResultCode ResultCode { get; init; }
+    public ResultCode ResultCode { get; set; }
 
-    public required string MasterDialogId { get; init; }
-    public uint ResetFlag { get; init; }
-    public uint SilentFlag { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string MasterDialogId { get; set; }
+    public uint ResetFlag { get; set; }
+    public uint SilentFlag { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public ResultCodeMst() { }
 

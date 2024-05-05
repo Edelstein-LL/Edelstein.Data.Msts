@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class MovieKeyMst : ISerializable
 {
     [Key]
-    public required string Key { get; init; }
+    public required string Key { get; set; }
 
-    public uint MasterMovieId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterMovieId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public MovieKeyMst() { }
 

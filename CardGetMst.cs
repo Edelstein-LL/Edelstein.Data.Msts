@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class CardGetMst : ISerializable
 {
     [Key]
-    public uint MasterCardId { get; init; }
+    public uint MasterCardId { get; set; }
 
-    public int Index { get; init; }
-    public GetCategory GetCategory { get; init; }
-    public uint Value { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int Index { get; set; }
+    public GetCategory GetCategory { get; set; }
+    public uint Value { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public CardGetMst() { }
 

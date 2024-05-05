@@ -7,13 +7,13 @@ namespace Edelstein.Data.Msts;
 public class LiveMissionMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public LiveMissionType Type { get; init; }
-    public LiveLevel Level { get; init; }
-    public required string Value { get; init; }
-    public uint MasterLiveMissionRewardId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public LiveMissionType Type { get; set; }
+    public LiveLevel Level { get; set; }
+    public required string Value { get; set; }
+    public uint MasterLiveMissionRewardId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveMissionMst() { }
 

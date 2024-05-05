@@ -7,17 +7,17 @@ namespace Edelstein.Data.Msts;
 public class ExchangeMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public ExchangeType ExchangeType { get; init; }
-    public ConsumeType ConsumeType { get; init; }
-    public uint Value { get; init; }
-    public required string BannerSpriteName { get; init; }
-    public required string Name { get; init; }
-    public ExchangeTab ExchangeTab { get; init; }
-    public int Priority { get; init; }
-    public uint DisplayControlFlag { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public ExchangeType ExchangeType { get; set; }
+    public ConsumeType ConsumeType { get; set; }
+    public uint Value { get; set; }
+    public required string BannerSpriteName { get; set; }
+    public required string Name { get; set; }
+    public ExchangeTab ExchangeTab { get; set; }
+    public int Priority { get; set; }
+    public uint DisplayControlFlag { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public ExchangeMst() { }
 

@@ -7,13 +7,13 @@ namespace Edelstein.Data.Msts;
 public class ReleaseLabelMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Description { get; init; }
-    public uint ReleaseStatus { get; init; }
-    public required string Scope { get; init; }
-    public required string OpenedAt { get; init; }
-    public required string ClosedAt { get; init; }
+    public required string Description { get; set; }
+    public uint ReleaseStatus { get; set; }
+    public required string Scope { get; set; }
+    public required string OpenedAt { get; set; }
+    public required string ClosedAt { get; set; }
 
     public ReleaseLabelMst() { }
 

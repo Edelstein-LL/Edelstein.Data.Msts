@@ -7,28 +7,28 @@ namespace Edelstein.Data.Msts;
 public class CardMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint MasterCharacterId { get; init; }
-    public required string Name { get; init; }
-    public required CardType Type { get; init; }
-    public uint MasterSkillCenterId { get; init; }
-    public uint MasterSkillId { get; init; }
-    public Rarity Rarity { get; init; }
-    public int Hp { get; init; }
-    public int Smile { get; init; }
-    public int Cool { get; init; }
-    public int Pure { get; init; }
-    public required string IllustId { get; init; }
-    public required string EvolveIllustId { get; init; }
-    public uint MasterCardLevelId { get; init; }
-    public required string UniqueBackgroundFileName { get; init; }
-    public required string EvolveUniqueBackgroundFileName { get; init; }
-    public GetCategory GetCategory { get; init; }
-    public uint MasterCardSysVoiceId { get; init; }
-    public uint AlbumUnitMId { get; init; }
-    public int Priority { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterCharacterId { get; set; }
+    public required string Name { get; set; }
+    public required CardType Type { get; set; }
+    public uint MasterSkillCenterId { get; set; }
+    public uint MasterSkillId { get; set; }
+    public Rarity Rarity { get; set; }
+    public int Hp { get; set; }
+    public int Smile { get; set; }
+    public int Cool { get; set; }
+    public int Pure { get; set; }
+    public required string IllustId { get; set; }
+    public required string EvolveIllustId { get; set; }
+    public uint MasterCardLevelId { get; set; }
+    public required string UniqueBackgroundFileName { get; set; }
+    public required string EvolveUniqueBackgroundFileName { get; set; }
+    public GetCategory GetCategory { get; set; }
+    public uint MasterCardSysVoiceId { get; set; }
+    public uint AlbumUnitMId { get; set; }
+    public int Priority { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public CardMst() { }
 

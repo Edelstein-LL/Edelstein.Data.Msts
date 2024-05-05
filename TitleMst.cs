@@ -7,14 +7,14 @@ namespace Edelstein.Data.Msts;
 public class TitleMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public TitleCategory Category { get; init; }
-    public required string DetailText { get; init; }
-    public int Priority { get; init; }
-    public required string SpriteName { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public TitleCategory Category { get; set; }
+    public required string DetailText { get; set; }
+    public int Priority { get; set; }
+    public required string SpriteName { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public TitleMst() { }
 

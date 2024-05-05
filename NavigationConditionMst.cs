@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class NavigationConditionMst : ISerializable
 {
     [Key]
-    public required string MasterNavigationId { get; init; }
+    public required string MasterNavigationId { get; set; }
 
-    public NavigationConditionType ConditionType { get; init; }
-    public uint ConditionValue { get; init; }
-    public int ConditionNumber { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public NavigationConditionType ConditionType { get; set; }
+    public uint ConditionValue { get; set; }
+    public int ConditionNumber { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public NavigationConditionMst() { }
 

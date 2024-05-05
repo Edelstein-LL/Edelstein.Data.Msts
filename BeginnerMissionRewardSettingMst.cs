@@ -8,11 +8,11 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterBeginnerMissionId), nameof(Level), nameof(Number))]
 public class BeginnerMissionRewardSettingMst : ISerializable
 {
-    public uint MasterBeginnerMissionId { get; init; }
-    public uint Level { get; init; }
-    public uint Number { get; init; }
-    public uint MasterBeginnerMissionRewardId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterBeginnerMissionId { get; set; }
+    public uint Level { get; set; }
+    public uint Number { get; set; }
+    public uint MasterBeginnerMissionRewardId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public BeginnerMissionRewardSettingMst() { }
 

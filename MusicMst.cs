@@ -7,25 +7,25 @@ namespace Edelstein.Data.Msts;
 public class MusicMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public required string ShortName { get; init; }
-    public required string Kana { get; init; }
-    public required string Artist { get; init; }
-    public required string DetailInfo { get; init; }
-    public required string DictionaryReference { get; init; }
-    public required string DictionaryComment { get; init; }
-    public BandCategory BandCategory { get; init; }
-    public uint MasterGroupId { get; init; }
-    public required string JacketImageName { get; init; }
-    public uint MasterBgmId { get; init; }
-    public uint PreviewMasterBgmId { get; init; }
-    public uint Locked { get; init; }
-    public ObtainType ObtainType { get; init; }
-    public int IsAcLevelMusic { get; init; }
-    public required string ReleaseDateTime { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public required string ShortName { get; set; }
+    public required string Kana { get; set; }
+    public required string Artist { get; set; }
+    public required string DetailInfo { get; set; }
+    public required string DictionaryReference { get; set; }
+    public required string DictionaryComment { get; set; }
+    public BandCategory BandCategory { get; set; }
+    public uint MasterGroupId { get; set; }
+    public required string JacketImageName { get; set; }
+    public uint MasterBgmId { get; set; }
+    public uint PreviewMasterBgmId { get; set; }
+    public uint Locked { get; set; }
+    public ObtainType ObtainType { get; set; }
+    public int IsAcLevelMusic { get; set; }
+    public required string ReleaseDateTime { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public MusicMst() { }
 

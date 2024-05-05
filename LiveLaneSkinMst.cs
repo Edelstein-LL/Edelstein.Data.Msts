@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class LiveLaneSkinMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string LanePath { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string LanePath { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveLaneSkinMst() { }
 

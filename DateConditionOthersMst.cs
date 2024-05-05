@@ -8,10 +8,10 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(Id), nameof(Num))]
 public class DateConditionOthersMst : ISerializable
 {
-    public uint Id { get; init; }
-    public uint Num { get; init; }
-    public required string Date { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Id { get; set; }
+    public uint Num { get; set; }
+    public required string Date { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public DateConditionOthersMst() { }
 

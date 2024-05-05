@@ -7,17 +7,17 @@ namespace Edelstein.Data.Msts;
 public class LoginBonusMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public LoginBonusType Type { get; init; }
-    public uint MasterEventId { get; init; }
-    public uint Loop { get; init; }
-    public int Priority { get; init; }
-    public required string PrefabName { get; init; }
-    public required string BoardSpriteName { get; init; }
-    public uint MasterVoiceId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public LoginBonusType Type { get; set; }
+    public uint MasterEventId { get; set; }
+    public uint Loop { get; set; }
+    public int Priority { get; set; }
+    public required string PrefabName { get; set; }
+    public required string BoardSpriteName { get; set; }
+    public uint MasterVoiceId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LoginBonusMst() { }
 

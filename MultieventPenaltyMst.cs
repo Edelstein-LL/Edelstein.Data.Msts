@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class MultieventPenaltyMst : ISerializable
 {
     [Key]
-    public uint PenaltyCount { get; init; }
+    public uint PenaltyCount { get; set; }
 
-    public int PenaltySec { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int PenaltySec { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public MultieventPenaltyMst() { }
 

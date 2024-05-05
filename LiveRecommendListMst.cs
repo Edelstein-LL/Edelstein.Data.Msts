@@ -8,10 +8,10 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterLiveRecommendId), nameof(Number))]
 public class LiveRecommendListMst : ISerializable
 {
-    public uint MasterLiveRecommendId { get; init; }
-    public uint Number { get; init; }
-    public uint MasterLiveId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterLiveRecommendId { get; set; }
+    public uint Number { get; set; }
+    public uint MasterLiveId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveRecommendListMst() { }
 

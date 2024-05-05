@@ -7,11 +7,11 @@ namespace Edelstein.Data.Msts;
 public class AlbumSeriesThumbnailAssetMMst : ISerializable
 {
     [Key]
-    public uint AlbumSeriesId { get; init; }
+    public uint AlbumSeriesId { get; set; }
 
-    public required string ThumbnailAsset { get; init; }
-    public uint ThumbnailAssetEn { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string ThumbnailAsset { get; set; }
+    public uint ThumbnailAssetEn { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public AlbumSeriesThumbnailAssetMMst() { }
 

@@ -8,11 +8,11 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(Id), nameof(BandCategory))]
 public class LotteryEffMovieMst : ISerializable
 {
-    public uint Id { get; init; }
-    public BandCategory BandCategory { get; init; }
-    public uint NormalMovieId { get; init; }
-    public uint ExpectedMoveId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Id { get; set; }
+    public BandCategory BandCategory { get; set; }
+    public uint NormalMovieId { get; set; }
+    public uint ExpectedMoveId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LotteryEffMovieMst() { }
 

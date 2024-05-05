@@ -7,13 +7,13 @@ namespace Edelstein.Data.Msts;
 public class ComicMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint MasterGroupId { get; init; }
-    public uint Number { get; init; }
-    public required string Name { get; init; }
-    public required string ImageName { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterGroupId { get; set; }
+    public uint Number { get; set; }
+    public required string Name { get; set; }
+    public required string ImageName { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public ComicMst() { }
 

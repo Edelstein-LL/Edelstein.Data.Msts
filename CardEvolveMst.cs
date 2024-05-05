@@ -6,14 +6,12 @@ namespace Edelstein.Data.Msts;
 [Serializable]
 public class CardEvolveMst : ISerializable
 {
-    [Key]
-    public Rarity Rarity { get; init; }
-
-    public int EvolveCount { get; init; }
-    public int MaxLevel { get; init; }
-    public int Price { get; init; }
-    public int HpAddValue { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public Rarity Rarity { get; set; }
+    public int EvolveCount { get; set; }
+    public int MaxLevel { get; set; }
+    public int Price { get; set; }
+    public int HpAddValue { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public CardEvolveMst() { }
 

@@ -8,13 +8,13 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterEventId), nameof(Number))]
 public class EventPointMst : ISerializable
 {
-    public uint MasterEventId { get; init; }
-    public uint Number { get; init; }
-    public int Amount { get; init; }
-    public uint MasterEventPointRewardId { get; init; }
-    public uint RepeatInterval { get; init; }
-    public uint RepeatCount { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterEventId { get; set; }
+    public uint Number { get; set; }
+    public int Amount { get; set; }
+    public uint MasterEventPointRewardId { get; set; }
+    public uint RepeatInterval { get; set; }
+    public uint RepeatCount { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public EventPointMst() { }
 

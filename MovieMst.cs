@@ -7,20 +7,20 @@ namespace Edelstein.Data.Msts;
 public class MovieMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public MovieLengthType LengthType { get; init; }
-    public MovieScreenType ScreenType { get; init; }
-    public required string MovieName { get; init; }
-    public required string MovieDetail { get; init; }
-    public uint[] MasterCharacterIdList { get; init; } = [];
-    public uint MasterCharacterId { get; init; }
-    public required string FolderPath { get; init; }
-    public required string FileName { get; init; }
-    public required string ThumbnailSpriteName { get; init; }
-    public GetCategory GetCategory { get; init; }
-    public uint[] MasterMusicIdList { get; init; } = [];
-    public uint MasterReleaseLabelId { get; init; }
+    public MovieLengthType LengthType { get; set; }
+    public MovieScreenType ScreenType { get; set; }
+    public required string MovieName { get; set; }
+    public required string MovieDetail { get; set; }
+    public uint[] MasterCharacterIdList { get; set; } = [];
+    public uint MasterCharacterId { get; set; }
+    public required string FolderPath { get; set; }
+    public required string FileName { get; set; }
+    public required string ThumbnailSpriteName { get; set; }
+    public GetCategory GetCategory { get; set; }
+    public uint[] MasterMusicIdList { get; set; } = [];
+    public uint MasterReleaseLabelId { get; set; }
 
     public MovieMst() { }
 

@@ -9,17 +9,17 @@ namespace Edelstein.Data.Msts;
 [Index(nameof(MasterMusicId))]
 public class MusicLevelMst : ISerializable
 {
-    public uint MasterMusicId { get; init; }
-    public LiveLevel Level { get; init; }
-    public int LevelNumber { get; init; }
-    public required string NoteDataFileName { get; init; }
-    public int FullCombo { get; init; }
-    public int BeforeClimaxNotesCount { get; init; }
-    public float ScoreCoeff { get; init; }
-    public float ClimaxScoreCoeff { get; init; }
-    public float VoltageIncreaseCoeff { get; init; }
-    public float VoltageDecreaseCoeff { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterMusicId { get; set; }
+    public LiveLevel Level { get; set; }
+    public int LevelNumber { get; set; }
+    public required string NoteDataFileName { get; set; }
+    public int FullCombo { get; set; }
+    public int BeforeClimaxNotesCount { get; set; }
+    public float ScoreCoeff { get; set; }
+    public float ClimaxScoreCoeff { get; set; }
+    public float VoltageIncreaseCoeff { get; set; }
+    public float VoltageDecreaseCoeff { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public MusicLevelMst() { }
 

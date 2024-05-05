@@ -7,18 +7,18 @@ namespace Edelstein.Data.Msts;
 public class GroupMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public BandCategory Category { get; init; }
-    public required string ImageColor { get; init; }
-    public required string RecommendListTextColor { get; init; }
-    public int SortPriority { get; init; }
-    public uint RecommendedDeckView { get; init; }
-    public int IsCategoryJudge { get; init; }
-    public uint MusicSelectSortView { get; init; }
-    public required string HomeBgmSoundKey { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public BandCategory Category { get; set; }
+    public required string ImageColor { get; set; }
+    public required string RecommendListTextColor { get; set; }
+    public int SortPriority { get; set; }
+    public uint RecommendedDeckView { get; set; }
+    public int IsCategoryJudge { get; set; }
+    public uint MusicSelectSortView { get; set; }
+    public required string HomeBgmSoundKey { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public GroupMst() { }
 

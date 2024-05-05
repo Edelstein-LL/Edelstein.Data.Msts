@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class CardEvolveConditionMst : ISerializable
 {
     [Key]
-    public uint MasterCardId { get; init; }
+    public uint MasterCardId { get; set; }
 
-    public uint EvolveCount { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint EvolveCount { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public CardEvolveConditionMst() { }
 

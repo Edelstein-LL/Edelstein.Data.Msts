@@ -8,9 +8,9 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterEventId), nameof(MasterStoryId))]
 public class EventStoryMst : ISerializable
 {
-    public uint MasterEventId { get; init; }
-    public uint MasterStoryId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterEventId { get; set; }
+    public uint MasterStoryId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public EventStoryMst() { }
 

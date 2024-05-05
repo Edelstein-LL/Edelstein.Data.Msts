@@ -8,13 +8,13 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(Id), nameof(LiveMode), nameof(ScoreRank))]
 public class LiveRewardSettingMst : ISerializable
 {
-    public uint Id { get; init; }
-    public LiveMode LiveMode { get; init; }
-    public ScoreRank ScoreRank { get; init; }
-    public uint[] MasterLiveRewardIdList { get; init; } = [];
-    public uint[] RareMasterLiveRewardIdList { get; init; } = [];
-    public uint EnsuredMasterLiveRewardId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Id { get; set; }
+    public LiveMode LiveMode { get; set; }
+    public ScoreRank ScoreRank { get; set; }
+    public uint[] MasterLiveRewardIdList { get; set; } = [];
+    public uint[] RareMasterLiveRewardIdList { get; set; } = [];
+    public uint EnsuredMasterLiveRewardId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveRewardSettingMst() { }
 

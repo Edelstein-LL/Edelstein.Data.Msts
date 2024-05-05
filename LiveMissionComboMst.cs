@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class LiveMissionComboMst : ISerializable
 {
     [Key]
-    public uint MasterMusicId { get; init; }
+    public uint MasterMusicId { get; set; }
 
-    public uint[] ValueList { get; init; } = [];
-    public uint MasterReleaseLabelId { get; init; }
+    public uint[] ValueList { get; set; } = [];
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveMissionComboMst() { }
 

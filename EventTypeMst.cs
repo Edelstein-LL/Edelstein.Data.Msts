@@ -8,10 +8,10 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(EventLiveName))]
 public class EventTypeMst : ISerializable
 {
-    public EventType Type { get; init; }
-    public required string EventLiveName { get; init; }
-    public uint MasterMultiPenaltyId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public EventType Type { get; set; }
+    public required string EventLiveName { get; set; }
+    public uint MasterMultiPenaltyId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public EventTypeMst() { }
 

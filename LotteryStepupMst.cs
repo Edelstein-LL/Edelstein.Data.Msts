@@ -7,13 +7,13 @@ namespace Edelstein.Data.Msts;
 public class LotteryStepupMst : ISerializable
 {
     [Key]
-    public uint MasterLotteryId { get; init; }
+    public uint MasterLotteryId { get; set; }
 
-    public int Count { get; init; }
-    public int NextCount { get; init; }
-    public uint MasterLotteryPriceId { get; init; }
-    public uint MasterLotteryRarityId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int Count { get; set; }
+    public int NextCount { get; set; }
+    public uint MasterLotteryPriceId { get; set; }
+    public uint MasterLotteryRarityId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LotteryStepupMst() { }
 

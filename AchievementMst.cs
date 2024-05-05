@@ -7,11 +7,11 @@ namespace Edelstein.Data.Msts;
 public class AchievementMst : ISerializable
 {
     [Key]
-    public required string Id { get; init; }
+    public required string Id { get; set; }
 
-    public required string AchievementIdAndroid { get; init; }
-    public required string AchievementIdIos { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string AchievementIdAndroid { get; set; }
+    public required string AchievementIdIos { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public AchievementMst() { }
 

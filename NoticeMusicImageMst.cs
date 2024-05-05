@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class NoticeMusicImageMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string StartLoadingImageName1 { get; init; }
-    public required string StartLoadingImageName2 { get; init; }
-    public required string StartLoadingImageName3 { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string StartLoadingImageName1 { get; set; }
+    public required string StartLoadingImageName2 { get; set; }
+    public required string StartLoadingImageName3 { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public NoticeMusicImageMst() { }
 

@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class EvolveItemConditionMst : ISerializable
 {
     [Key]
-    public uint MasterItemId { get; init; }
+    public uint MasterItemId { get; set; }
 
-    public uint Number { get; init; }
-    public EvolveItemConditionType Type { get; init; }
-    public uint[] ValueList { get; init; } = [];
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Number { get; set; }
+    public EvolveItemConditionType Type { get; set; }
+    public uint[] ValueList { get; set; } = [];
+    public uint MasterReleaseLabelId { get; set; }
 
     public EvolveItemConditionMst() { }
 

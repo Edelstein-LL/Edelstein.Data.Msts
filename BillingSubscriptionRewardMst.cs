@@ -8,11 +8,11 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterBillingSubscriptionLabel), nameof(Number))]
 public class BillingSubscriptionRewardMst : ISerializable
 {
-    public required string MasterBillingSubscriptionLabel { get; init; }
-    public uint Number { get; init; }
-    public SubscriptionRewardType SubscriptionRewardType { get; init; }
-    public uint Value { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string MasterBillingSubscriptionLabel { get; set; }
+    public uint Number { get; set; }
+    public SubscriptionRewardType SubscriptionRewardType { get; set; }
+    public uint Value { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public BillingSubscriptionRewardMst() { }
 

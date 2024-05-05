@@ -8,16 +8,16 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(Id), nameof(Number))]
 public class LotteryPriceMst : ISerializable
 {
-    public uint Id { get; init; }
-    public uint Number { get; init; }
-    public ConsumeType ConsumeType { get; init; }
-    public int Count { get; init; }
-    public int Price { get; init; }
-    public int LimitCount { get; init; }
-    public int DailyLimitCount { get; init; }
-    public uint MasterItemId { get; init; }
-    public uint MasterLotteryRewardId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Id { get; set; }
+    public uint Number { get; set; }
+    public ConsumeType ConsumeType { get; set; }
+    public int Count { get; set; }
+    public int Price { get; set; }
+    public int LimitCount { get; set; }
+    public int DailyLimitCount { get; set; }
+    public uint MasterItemId { get; set; }
+    public uint MasterLotteryRewardId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LotteryPriceMst() { }
 

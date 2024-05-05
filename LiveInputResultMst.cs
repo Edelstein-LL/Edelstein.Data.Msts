@@ -7,16 +7,16 @@ namespace Edelstein.Data.Msts;
 public class LiveInputResultMst : ISerializable
 {
     [Key]
-    public InputResultType Type { get; init; }
+    public InputResultType Type { get; set; }
 
-    public float OffsetTimeSec { get; init; }
-    public float OffsetTimeSecSlider { get; init; }
-    public float ScoreCoeff { get; init; }
-    public int LifeDamage { get; init; }
-    public int MidpointLifeDamage { get; init; }
-    public int BombLifeDamage { get; init; }
-    public int EnableCombo { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public float OffsetTimeSec { get; set; }
+    public float OffsetTimeSecSlider { get; set; }
+    public float ScoreCoeff { get; set; }
+    public int LifeDamage { get; set; }
+    public int MidpointLifeDamage { get; set; }
+    public int BombLifeDamage { get; set; }
+    public int EnableCombo { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveInputResultMst() { }
 

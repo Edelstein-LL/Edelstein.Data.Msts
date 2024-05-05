@@ -7,15 +7,15 @@ namespace Edelstein.Data.Msts;
 public class BillingSubscriptionMst : ISerializable
 {
     [Key]
-    public required string MasterBillingProductId { get; init; }
+    public required string MasterBillingProductId { get; set; }
 
-    public required string Label { get; init; }
-    public uint DeviceType { get; init; }
-    public required string Name { get; init; }
-    public required string Title { get; init; }
-    public required string Summary { get; init; }
-    public SubscriptionType SubscriptionType { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Label { get; set; }
+    public uint DeviceType { get; set; }
+    public required string Name { get; set; }
+    public required string Title { get; set; }
+    public required string Summary { get; set; }
+    public SubscriptionType SubscriptionType { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public BillingSubscriptionMst() { }
 

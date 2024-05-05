@@ -7,16 +7,16 @@ namespace Edelstein.Data.Msts;
 public class AlbumCardMMst : ISerializable
 {
     [Key]
-    public uint CardId { get; init; }
+    public uint CardId { get; set; }
 
-    public int NaviMoveX { get; init; }
-    public int NaviMoveY { get; init; }
-    public required string ThumbnailName { get; init; }
-    public required string SignedThumbnailName { get; init; }
-    public required string AssetName { get; init; }
-    public required string SignedAssetName { get; init; }
-    public int IsBgActive { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int NaviMoveX { get; set; }
+    public int NaviMoveY { get; set; }
+    public required string ThumbnailName { get; set; }
+    public required string SignedThumbnailName { get; set; }
+    public required string AssetName { get; set; }
+    public required string SignedAssetName { get; set; }
+    public int IsBgActive { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public AlbumCardMMst() { }
 

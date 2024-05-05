@@ -8,9 +8,9 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(UnitTypeId), nameof(MemberTagId))]
 public class AlbumUnitTypeMemberTagMMst : ISerializable
 {
-    public uint UnitTypeId { get; init; }
-    public uint MemberTagId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint UnitTypeId { get; set; }
+    public uint MemberTagId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public AlbumUnitTypeMemberTagMMst() { }
 

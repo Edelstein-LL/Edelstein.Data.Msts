@@ -7,19 +7,19 @@ namespace Edelstein.Data.Msts;
 public class AlbumUnitMMst : ISerializable
 {
     [Key]
-    public uint UnitId { get; init; }
+    public uint UnitId { get; set; }
 
-    public uint UnitTypeId { get; init; }
-    public uint AlbumSeriesId { get; init; }
-    public required string Eponym { get; init; }
-    public required string EponymEn { get; init; }
-    public required string Name { get; init; }
-    public required string NameEn { get; init; }
-    public uint NormalCardId { get; init; }
-    public uint RankMaxCardId { get; init; }
-    public uint Rarity { get; init; }
-    public uint AttributeId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint UnitTypeId { get; set; }
+    public uint AlbumSeriesId { get; set; }
+    public required string Eponym { get; set; }
+    public required string EponymEn { get; set; }
+    public required string Name { get; set; }
+    public required string NameEn { get; set; }
+    public uint NormalCardId { get; set; }
+    public uint RankMaxCardId { get; set; }
+    public uint Rarity { get; set; }
+    public uint AttributeId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public AlbumUnitMMst() { }
 

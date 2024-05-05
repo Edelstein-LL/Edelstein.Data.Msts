@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class TitleScreenMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string PrefabName { get; init; }
-    public uint MasterBgmId { get; init; }
-    public int Priority { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string PrefabName { get; set; }
+    public uint MasterBgmId { get; set; }
+    public int Priority { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public TitleScreenMst() { }
 

@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class CommonBgMovieMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint MasterMovieId { get; init; }
-    public BandCategory BandCategory { get; init; }
-    public required string SceneType { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterMovieId { get; set; }
+    public BandCategory BandCategory { get; set; }
+    public required string SceneType { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public CommonBgMovieMst() { }
 

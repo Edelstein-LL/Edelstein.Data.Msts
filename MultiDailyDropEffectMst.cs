@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class MultiDailyDropEffectMst : ISerializable
 {
     [Key]
-    public required string Name { get; init; }
+    public required string Name { get; set; }
 
-    public uint MasterReleaseLabelId { get; init; }
-    public DayOfWeek DayOfWeek { get; init; }
+    public uint MasterReleaseLabelId { get; set; }
+    public DayOfWeek DayOfWeek { get; set; }
 
     public MultiDailyDropEffectMst() { }
 

@@ -7,15 +7,15 @@ namespace Edelstein.Data.Msts;
 public class ChatRoomMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint MasterChatId { get; init; }
-    public uint RoomId { get; init; }
-    public required string HashTag { get; init; }
-    public required string FirstLineValue { get; init; }
-    public required string IconPath { get; init; }
-    public required string AppearCharaIdList { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterChatId { get; set; }
+    public uint RoomId { get; set; }
+    public required string HashTag { get; set; }
+    public required string FirstLineValue { get; set; }
+    public required string IconPath { get; set; }
+    public required string AppearCharaIdList { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public ChatRoomMst() { }
 

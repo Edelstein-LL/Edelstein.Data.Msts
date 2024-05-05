@@ -8,11 +8,11 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterLoginBonusId), nameof(DayCount))]
 public class LoginBonusRewardSettingMst : ISerializable
 {
-    public uint MasterLoginBonusId { get; init; }
-    public int DayCount { get; init; }
-    public uint MasterLoginBonusRewardId { get; init; }
-    public required string ItemBackgroundSpriteName { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterLoginBonusId { get; set; }
+    public int DayCount { get; set; }
+    public uint MasterLoginBonusRewardId { get; set; }
+    public required string ItemBackgroundSpriteName { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LoginBonusRewardSettingMst() { }
 

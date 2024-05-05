@@ -7,16 +7,16 @@ namespace Edelstein.Data.Msts;
 public class ChatStampMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public BandCategory Group { get; init; }
-    public uint IsUsableChat { get; init; }
-    public uint IsUsableMulti { get; init; }
-    public required string Filename { get; init; }
-    public uint Order { get; init; }
-    public uint InitialStamp { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public BandCategory Group { get; set; }
+    public uint IsUsableChat { get; set; }
+    public uint IsUsableMulti { get; set; }
+    public required string Filename { get; set; }
+    public uint Order { get; set; }
+    public uint InitialStamp { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public ChatStampMst() { }
 

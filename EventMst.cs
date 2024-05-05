@@ -7,19 +7,19 @@ namespace Edelstein.Data.Msts;
 public class EventMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public EventType Type { get; init; }
-    public MemberRankingType MemberRankingType { get; init; }
-    public required string ResultClosedDate { get; init; }
-    public required string AggregationDate { get; init; }
-    public uint[] RewardMemberMasterCardIdList { get; init; } = [];
-    public uint MasterEventPointSettingsId { get; init; }
-    public required string OpeningObjName { get; init; }
-    public BandCategory OpeningGroupBg { get; init; }
-    public uint[] FavoriteMemberSettingCharacterIds { get; init; } = [];
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public EventType Type { get; set; }
+    public MemberRankingType MemberRankingType { get; set; }
+    public required string ResultClosedDate { get; set; }
+    public required string AggregationDate { get; set; }
+    public uint[] RewardMemberMasterCardIdList { get; set; } = [];
+    public uint MasterEventPointSettingsId { get; set; }
+    public required string OpeningObjName { get; set; }
+    public BandCategory OpeningGroupBg { get; set; }
+    public uint[] FavoriteMemberSettingCharacterIds { get; set; } = [];
+    public uint MasterReleaseLabelId { get; set; }
 
     public EventMst() { }
 

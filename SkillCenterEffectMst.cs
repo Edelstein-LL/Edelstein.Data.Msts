@@ -7,15 +7,15 @@ namespace Edelstein.Data.Msts;
 public class SkillCenterEffectMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint TargetSchoolGrade { get; init; }
-    public uint TargetGroupId { get; init; }
-    public SkillCardType TargetCardType { get; init; }
-    public uint CalcType { get; init; }
-    public uint Value { get; init; }
-    public StatusUpType TargetParam { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint TargetSchoolGrade { get; set; }
+    public uint TargetGroupId { get; set; }
+    public SkillCardType TargetCardType { get; set; }
+    public uint CalcType { get; set; }
+    public uint Value { get; set; }
+    public StatusUpType TargetParam { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public SkillCenterEffectMst() { }
 

@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class ConstMst : ISerializable
 {
     [Key]
-    public required string Id { get; init; }
+    public required string Id { get; set; }
 
-    public required string Value { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Value { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public ConstMst() { }
 

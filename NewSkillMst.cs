@@ -7,20 +7,20 @@ namespace Edelstein.Data.Msts;
 public class NewSkillMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public required string DetailText { get; init; }
-    public SkillMainTriggerType Trigger { get; init; }
-    public uint[] TriggerValue { get; init; } = [];
-    public uint[] Probability { get; init; } = [];
-    public uint[] EffectiveMilliSecs { get; init; } = [];
-    public SkillSubTargetType SubTarget { get; init; }
-    public uint TargetGroupId { get; init; }
-    public uint TargetSchoolGrade { get; init; }
-    public SkillMainEffectType EffectType { get; init; }
-    public uint[] EffectiveValues { get; init; } = [];
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public required string DetailText { get; set; }
+    public SkillMainTriggerType Trigger { get; set; }
+    public uint[] TriggerValue { get; set; } = [];
+    public uint[] Probability { get; set; } = [];
+    public uint[] EffectiveMilliSecs { get; set; } = [];
+    public SkillSubTargetType SubTarget { get; set; }
+    public uint TargetGroupId { get; set; }
+    public uint TargetSchoolGrade { get; set; }
+    public SkillMainEffectType EffectType { get; set; }
+    public uint[] EffectiveValues { get; set; } = [];
+    public uint MasterReleaseLabelId { get; set; }
 
     public NewSkillMst() { }
 

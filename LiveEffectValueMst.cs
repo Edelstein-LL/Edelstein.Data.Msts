@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class LiveEffectValueMst : ISerializable
 {
     [Key]
-    public int Id { get; init; }
+    public int Id { get; set; }
 
-    public required string EffectObjectName { get; init; }
-    public required string BaseColor { get; init; }
-    public required string ChangeColor { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string EffectObjectName { get; set; }
+    public required string BaseColor { get; set; }
+    public required string ChangeColor { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveEffectValueMst() { }
 

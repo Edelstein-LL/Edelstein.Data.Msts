@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class PartVoiceKeyMst : ISerializable
 {
     [Key]
-    public required string Key { get; init; }
+    public required string Key { get; set; }
 
-    public uint Num { get; init; }
-    public uint Group { get; init; }
-    public required string Comment { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Num { get; set; }
+    public uint Group { get; set; }
+    public required string Comment { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public PartVoiceKeyMst() { }
 

@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class NoticeCardMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public int Number { get; init; }
-    public uint CardId { get; init; }
-    public required string IntroductionText { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int Number { get; set; }
+    public uint CardId { get; set; }
+    public required string IntroductionText { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public NoticeCardMst() { }
 

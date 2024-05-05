@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class LotteryEffMovieRatioMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public Rarity MinRarity { get; init; }
-    public uint NormalMovieRatio { get; init; }
-    public uint ExpectedMoveRatio { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public Rarity MinRarity { get; set; }
+    public uint NormalMovieRatio { get; set; }
+    public uint ExpectedMoveRatio { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LotteryEffMovieRatioMst() { }
 

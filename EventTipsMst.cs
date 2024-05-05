@@ -8,10 +8,10 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterEventId), nameof(RootPath))]
 public class EventTipsMst : ISerializable
 {
-    public uint MasterEventId { get; init; }
-    public required string Title { get; init; }
-    public required string RootPath { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterEventId { get; set; }
+    public required string Title { get; set; }
+    public required string RootPath { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public EventTipsMst() { }
 

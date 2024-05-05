@@ -8,11 +8,11 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterEventId), nameof(TargetId))]
 public class EventCardBonusMst : ISerializable
 {
-    public uint MasterEventId { get; init; }
-    public uint TargetId { get; init; }
-    public int[] PointBonusRatioList { get; init; } = [];
-    public int[] EventTicketBonusAmountList { get; init; } = [];
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterEventId { get; set; }
+    public uint TargetId { get; set; }
+    public int[] PointBonusRatioList { get; set; } = [];
+    public int[] EventTicketBonusAmountList { get; set; } = [];
+    public uint MasterReleaseLabelId { get; set; }
 
     public EventCardBonusMst() { }
 

@@ -7,17 +7,17 @@ namespace Edelstein.Data.Msts;
 public class MultiRoomSelectMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public required string Detail { get; init; }
-    public uint Opened { get; init; }
-    public uint Status { get; init; }
-    public uint MasterMultiRoomConditionId { get; init; }
-    public int MinRoomId { get; init; }
-    public int MaxRoomId { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
-    public LiveMode LiveMode { get; init; }
+    public required string Name { get; set; }
+    public required string Detail { get; set; }
+    public uint Opened { get; set; }
+    public uint Status { get; set; }
+    public uint MasterMultiRoomConditionId { get; set; }
+    public int MinRoomId { get; set; }
+    public int MaxRoomId { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
+    public LiveMode LiveMode { get; set; }
 
     public MultiRoomSelectMst() { }
 

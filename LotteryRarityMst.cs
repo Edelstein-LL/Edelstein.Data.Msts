@@ -10,14 +10,14 @@ namespace Edelstein.Data.Msts;
 [Index(nameof(MasterLotteryItemId))]
 public class LotteryRarityMst : ISerializable
 {
-    public uint Id { get; init; }
-    public uint Number { get; init; }
-    public uint MasterLotteryItemId { get; init; }
-    public Rarity Rarity { get; init; }
-    public int Ratio { get; init; }
-    public int PickupRatio { get; init; }
-    public uint Ensured { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Id { get; set; }
+    public uint Number { get; set; }
+    public uint MasterLotteryItemId { get; set; }
+    public Rarity Rarity { get; set; }
+    public int Ratio { get; set; }
+    public int PickupRatio { get; set; }
+    public uint Ensured { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LotteryRarityMst() { }
 

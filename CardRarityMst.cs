@@ -7,14 +7,14 @@ namespace Edelstein.Data.Msts;
 public class CardRarityMst : ISerializable
 {
     [Key]
-    public Rarity Rarity { get; init; }
+    public Rarity Rarity { get; set; }
 
-    public int MaxLevel { get; init; }
-    public int BaseEvolveCount { get; init; }
-    public uint MasterCardSkillLevelId { get; init; }
-    public uint ExchangeMasterItemId { get; init; }
-    public int ExchangeItemAmount { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int MaxLevel { get; set; }
+    public int BaseEvolveCount { get; set; }
+    public uint MasterCardSkillLevelId { get; set; }
+    public uint ExchangeMasterItemId { get; set; }
+    public int ExchangeItemAmount { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public CardRarityMst() { }
 

@@ -7,13 +7,13 @@ namespace Edelstein.Data.Msts;
 public class MusicShopPriceMst : ISerializable
 {
     [Key]
-    public uint MasterMusicId { get; init; }
+    public uint MasterMusicId { get; set; }
 
-    public ConsumeType ConsumeType { get; init; }
-    public uint Value { get; init; }
-    public int Amount { get; init; }
-    public int Priority { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public ConsumeType ConsumeType { get; set; }
+    public uint Value { get; set; }
+    public int Amount { get; set; }
+    public int Priority { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public MusicShopPriceMst() { }
 

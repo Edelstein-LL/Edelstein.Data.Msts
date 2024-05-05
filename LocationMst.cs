@@ -7,14 +7,14 @@ namespace Edelstein.Data.Msts;
 public class LocationMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public required string Description { get; init; }
-    public uint MasterLocationRewardId { get; init; }
-    public required string BannerName { get; init; }
-    public int Priority { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public required string Description { get; set; }
+    public uint MasterLocationRewardId { get; set; }
+    public required string BannerName { get; set; }
+    public int Priority { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LocationMst() { }
 

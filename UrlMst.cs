@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class UrlMst : ISerializable
 {
     [Key]
-    public required string Id { get; init; }
+    public required string Id { get; set; }
 
-    public required string Url { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Url { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public UrlMst() { }
 

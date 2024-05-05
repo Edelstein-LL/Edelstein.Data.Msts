@@ -7,13 +7,13 @@ namespace Edelstein.Data.Msts;
 public class DateConditionMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public DateConditionType DateConditionType { get; init; }
-    public uint Arg1 { get; init; }
-    public uint Arg2 { get; init; }
-    public uint Arg3 { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public DateConditionType DateConditionType { get; set; }
+    public uint Arg1 { get; set; }
+    public uint Arg2 { get; set; }
+    public uint Arg3 { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public DateConditionMst() { }
 

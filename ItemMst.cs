@@ -7,24 +7,24 @@ namespace Edelstein.Data.Msts;
 public class ItemMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public ItemCategory Category { get; init; }
-    public ItemEffectType EffectType { get; init; }
-    public uint EffectConditionValue { get; init; }
-    public int EffectValue { get; init; }
-    public int ExtraEffectValue { get; init; }
-    public required string EffectDetail { get; init; }
-    public required string WayToUse { get; init; }
-    public required string WayToGet { get; init; }
-    public int Price { get; init; }
-    public required string SpriteName { get; init; }
-    public ItemTab ItemTab { get; init; }
-    public int Priority { get; init; }
-    public required string ExpireDate { get; init; }
-    public ItemExpireType ItemExpireType { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public ItemCategory Category { get; set; }
+    public ItemEffectType EffectType { get; set; }
+    public uint EffectConditionValue { get; set; }
+    public int EffectValue { get; set; }
+    public int ExtraEffectValue { get; set; }
+    public required string EffectDetail { get; set; }
+    public required string WayToUse { get; set; }
+    public required string WayToGet { get; set; }
+    public int Price { get; set; }
+    public required string SpriteName { get; set; }
+    public ItemTab ItemTab { get; set; }
+    public int Priority { get; set; }
+    public required string ExpireDate { get; set; }
+    public ItemExpireType ItemExpireType { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public ItemMst() { }
 

@@ -7,22 +7,22 @@ namespace Edelstein.Data.Msts;
 public class MultieventSettingMst : ISerializable
 {
     [Key]
-    public uint EventId { get; init; }
+    public uint EventId { get; set; }
 
-    public required string Name { get; init; }
-    public EventType Type { get; init; }
-    public uint[] TargetGroupIds { get; init; } = [];
-    public required CardType TargetType { get; init; }
-    public uint LeftLiveButtonCharaId { get; init; }
-    public uint RightLiveButtonCharaId { get; init; }
-    public LiveLevel NeedHelperLevel { get; init; }
-    public int NeedHelperPower { get; init; }
-    public int NeedHelperRank { get; init; }
-    public required string NeedHelpableMessage { get; init; }
-    public LiveLevel ExclusionLevel { get; init; }
-    public int HelpCount { get; init; }
-    public int RoomWaitSec { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public EventType Type { get; set; }
+    public uint[] TargetGroupIds { get; set; } = [];
+    public required CardType TargetType { get; set; }
+    public uint LeftLiveButtonCharaId { get; set; }
+    public uint RightLiveButtonCharaId { get; set; }
+    public LiveLevel NeedHelperLevel { get; set; }
+    public int NeedHelperPower { get; set; }
+    public int NeedHelperRank { get; set; }
+    public required string NeedHelpableMessage { get; set; }
+    public LiveLevel ExclusionLevel { get; set; }
+    public int HelpCount { get; set; }
+    public int RoomWaitSec { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public MultieventSettingMst() { }
 

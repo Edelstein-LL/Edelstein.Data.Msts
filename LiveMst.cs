@@ -7,28 +7,28 @@ namespace Edelstein.Data.Msts;
 public class LiveMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint MasterMusicId { get; init; }
-    public required CardType Type { get; init; }
-    public int ScoreC { get; init; }
-    public int ScoreB { get; init; }
-    public int ScoreA { get; init; }
-    public int ScoreS { get; init; }
-    public int MultiScoreC { get; init; }
-    public int MultiScoreB { get; init; }
-    public int MultiScoreA { get; init; }
-    public int MultiScoreS { get; init; }
-    public int LiveEffectValueId { get; init; }
-    public int Bpm { get; init; }
-    public float StartWait { get; init; }
-    public float EndWait { get; init; }
-    public uint MasterLiveRewardSettingId { get; init; }
-    public uint LiveBgMovieMasterId { get; init; }
-    public required string RehearsalImagePath { get; init; }
-    public int Priority { get; init; }
-    public int CampaignFlag { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterMusicId { get; set; }
+    public required CardType Type { get; set; }
+    public int ScoreC { get; set; }
+    public int ScoreB { get; set; }
+    public int ScoreA { get; set; }
+    public int ScoreS { get; set; }
+    public int MultiScoreC { get; set; }
+    public int MultiScoreB { get; set; }
+    public int MultiScoreA { get; set; }
+    public int MultiScoreS { get; set; }
+    public int LiveEffectValueId { get; set; }
+    public int Bpm { get; set; }
+    public float StartWait { get; set; }
+    public float EndWait { get; set; }
+    public uint MasterLiveRewardSettingId { get; set; }
+    public uint LiveBgMovieMasterId { get; set; }
+    public required string RehearsalImagePath { get; set; }
+    public int Priority { get; set; }
+    public int CampaignFlag { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveMst() { }
 

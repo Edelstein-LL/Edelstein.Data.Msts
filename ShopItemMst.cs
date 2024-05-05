@@ -7,20 +7,20 @@ namespace Edelstein.Data.Msts;
 public class ShopItemMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public uint MasterBillingShopId { get; init; }
-    public ConsumeType ConsumeType { get; init; }
-    public uint Price { get; init; }
-    public uint MasterShopRewardId { get; init; }
-    public uint BuyLimit { get; init; }
-    public uint StartdashTime { get; init; }
-    public uint StartdashExpireTime { get; init; }
-    public int Priority { get; init; }
-    public required string SpriteName { get; init; }
-    public TimeResetType TimeResetType { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public uint MasterBillingShopId { get; set; }
+    public ConsumeType ConsumeType { get; set; }
+    public uint Price { get; set; }
+    public uint MasterShopRewardId { get; set; }
+    public uint BuyLimit { get; set; }
+    public uint StartdashTime { get; set; }
+    public uint StartdashExpireTime { get; set; }
+    public int Priority { get; set; }
+    public required string SpriteName { get; set; }
+    public TimeResetType TimeResetType { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public ShopItemMst() { }
 

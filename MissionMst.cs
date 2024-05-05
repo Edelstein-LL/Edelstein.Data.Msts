@@ -7,18 +7,18 @@ namespace Edelstein.Data.Msts;
 public class MissionMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Title { get; init; }
-    public required string Detail { get; init; }
-    public MissionType Type { get; init; }
-    public uint ParentMasterMissionId { get; init; }
-    public MissionConditionType ConditionType { get; init; }
-    public uint[] ConditionValues { get; init; } = [];
-    public int ConditionNumber { get; init; }
-    public uint MasterMissionRewardId { get; init; }
-    public int Priority { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Title { get; set; }
+    public required string Detail { get; set; }
+    public MissionType Type { get; set; }
+    public uint ParentMasterMissionId { get; set; }
+    public MissionConditionType ConditionType { get; set; }
+    public uint[] ConditionValues { get; set; } = [];
+    public int ConditionNumber { get; set; }
+    public uint MasterMissionRewardId { get; set; }
+    public int Priority { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public MissionMst() { }
 

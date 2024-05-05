@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class EventScoreMst : ISerializable
 {
     [Key]
-    public uint MasterEventId { get; init; }
+    public uint MasterEventId { get; set; }
 
-    public int EventLivePointBase { get; init; }
-    public int EventPointRatio { get; init; }
-    public int EventBoostRatio { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int EventLivePointBase { get; set; }
+    public int EventPointRatio { get; set; }
+    public int EventBoostRatio { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public EventScoreMst() { }
 

@@ -7,15 +7,15 @@ namespace Edelstein.Data.Msts;
 public class LiveTapEffectMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string TapPath { get; init; }
-    public required string FlickPath { get; init; }
-    public required string LongPath { get; init; }
-    public required string LongLoopPath { get; init; }
-    public required string SkillPath { get; init; }
-    public required string EmptyPath { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string TapPath { get; set; }
+    public required string FlickPath { get; set; }
+    public required string LongPath { get; set; }
+    public required string LongLoopPath { get; set; }
+    public required string SkillPath { get; set; }
+    public required string EmptyPath { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveTapEffectMst() { }
 

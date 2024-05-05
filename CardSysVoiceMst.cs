@@ -8,14 +8,14 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(Id), nameof(MasterVoiceId))]
 public class CardSysVoiceMst : ISerializable
 {
-    public uint Id { get; init; }
-    public uint Num { get; init; }
-    public uint MasterVoiceId { get; init; }
-    public SystemVoiceType SystemVoiceType { get; init; }
-    public uint Value { get; init; }
-    public required string TextJa { get; init; }
-    public required string TextEn { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Id { get; set; }
+    public uint Num { get; set; }
+    public uint MasterVoiceId { get; set; }
+    public SystemVoiceType SystemVoiceType { get; set; }
+    public uint Value { get; set; }
+    public required string TextJa { get; set; }
+    public required string TextEn { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public CardSysVoiceMst() { }
 

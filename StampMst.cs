@@ -7,14 +7,14 @@ namespace Edelstein.Data.Msts;
 public class StampMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public BandCategory BandCategory { get; init; }
-    public uint IsRare { get; init; }
-    public required string SpriteName { get; init; }
-    public int Priority { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public BandCategory BandCategory { get; set; }
+    public uint IsRare { get; set; }
+    public required string SpriteName { get; set; }
+    public int Priority { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public StampMst() { }
 

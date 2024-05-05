@@ -8,10 +8,10 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(Id), nameof(Level))]
 public class StarEventLevelMst : ISerializable
 {
-    public uint Id { get; init; }
-    public uint Level { get; init; }
-    public int LiveScoreCoefficient { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Id { get; set; }
+    public uint Level { get; set; }
+    public int LiveScoreCoefficient { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public StarEventLevelMst() { }
 

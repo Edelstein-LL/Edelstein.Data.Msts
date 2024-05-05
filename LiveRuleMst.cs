@@ -7,15 +7,15 @@ namespace Edelstein.Data.Msts;
 public class LiveRuleMst : ISerializable
 {
     [Key]
-    public uint MasterLiveId { get; init; }
+    public uint MasterLiveId { get; set; }
 
-    public uint Number { get; init; }
-    public required string Detail { get; init; }
-    public LiveRuleType Type { get; init; }
-    public uint[] Values { get; init; } = [];
-    public int Amount { get; init; }
-    public uint CompareType { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint Number { get; set; }
+    public required string Detail { get; set; }
+    public LiveRuleType Type { get; set; }
+    public uint[] Values { get; set; } = [];
+    public int Amount { get; set; }
+    public uint CompareType { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LiveRuleMst() { }
 

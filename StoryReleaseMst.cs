@@ -7,16 +7,16 @@ namespace Edelstein.Data.Msts;
 public class StoryReleaseMst : ISerializable
 {
     [Key]
-    public uint MasterStoryPartId { get; init; }
+    public uint MasterStoryPartId { get; set; }
 
-    public int UserRank { get; init; }
-    public int GroupLevel { get; init; }
-    public uint MasterLiveId { get; init; }
-    public uint LiveScore { get; init; }
-    public uint MasterMissionId { get; init; }
-    public int EventPoint { get; init; }
-    public required string OpenedAtAfterEvent { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int UserRank { get; set; }
+    public int GroupLevel { get; set; }
+    public uint MasterLiveId { get; set; }
+    public uint LiveScore { get; set; }
+    public uint MasterMissionId { get; set; }
+    public int EventPoint { get; set; }
+    public required string OpenedAtAfterEvent { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public StoryReleaseMst() { }
 

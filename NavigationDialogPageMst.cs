@@ -8,10 +8,10 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MasterNavigationId), nameof(SpriteName))]
 public class NavigationDialogPageMst : ISerializable
 {
-    public required string MasterNavigationId { get; init; }
-    public required string SpriteName { get; init; }
-    public required string Message { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string MasterNavigationId { get; set; }
+    public required string SpriteName { get; set; }
+    public required string Message { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public NavigationDialogPageMst() { }
 

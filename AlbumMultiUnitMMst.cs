@@ -8,13 +8,13 @@ namespace Edelstein.Data.Msts;
 [PrimaryKey(nameof(MultiUnitId), nameof(UnitId))]
 public class AlbumMultiUnitMMst : ISerializable
 {
-    public uint MultiUnitId { get; init; }
-    public uint UnitId { get; init; }
-    public uint UnitNumber { get; init; }
-    public required string Eponym { get; init; }
-    public required string Name { get; init; }
-    public required string MultiCardName { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MultiUnitId { get; set; }
+    public uint UnitId { get; set; }
+    public uint UnitNumber { get; set; }
+    public required string Eponym { get; set; }
+    public required string Name { get; set; }
+    public required string MultiCardName { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public AlbumMultiUnitMMst() { }
 

@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class WipePlayListMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint[] WipeIdList { get; init; } = [];
-    public uint MasterReleaseLabelId { get; init; }
+    public uint[] WipeIdList { get; set; } = [];
+    public uint MasterReleaseLabelId { get; set; }
 
     public WipePlayListMst() { }
 

@@ -7,11 +7,11 @@ namespace Edelstein.Data.Msts;
 public class VoiceKeyMst : ISerializable
 {
     [Key]
-    public required string Key { get; init; }
+    public required string Key { get; set; }
 
-    public uint MasterVoiceId { get; init; }
-    public uint MasterVoiceNum { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterVoiceId { get; set; }
+    public uint MasterVoiceNum { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public VoiceKeyMst() { }
 

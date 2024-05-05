@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class ChatCharacterMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint CharacterId { get; init; }
-    public uint Group { get; init; }
-    public required string Name { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint CharacterId { get; set; }
+    public uint Group { get; set; }
+    public required string Name { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public ChatCharacterMst() { }
 

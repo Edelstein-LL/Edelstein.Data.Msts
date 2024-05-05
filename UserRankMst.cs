@@ -10,13 +10,13 @@ namespace Edelstein.Data.Msts;
 public class UserRankMst : ISerializable
 {
     [Key]
-    public int Rank { get; init; }
+    public int Rank { get; set; }
 
-    public int Exp { get; init; }
-    public uint MasterUserRankRewardId { get; init; }
-    public uint MaxFriend { get; init; }
-    public int MaxLp { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public int Exp { get; set; }
+    public uint MasterUserRankRewardId { get; set; }
+    public uint MaxFriend { get; set; }
+    public int MaxLp { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public UserRankMst() { }
 

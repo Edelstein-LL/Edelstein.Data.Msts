@@ -7,19 +7,19 @@ namespace Edelstein.Data.Msts;
 public class StoryPartMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint MasterStoryId { get; init; }
-    public uint Number { get; init; }
-    public required string Name { get; init; }
-    public uint MasterStoryRewardId { get; init; }
-    public uint MasterMusicId { get; init; }
-    public uint ScenarioId { get; init; }
-    public uint[] MovieIds { get; init; } = [];
-    public required string ImageName { get; init; }
-    public uint StampCharacterId { get; init; }
-    public uint StoreReviewSetting { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterStoryId { get; set; }
+    public uint Number { get; set; }
+    public required string Name { get; set; }
+    public uint MasterStoryRewardId { get; set; }
+    public uint MasterMusicId { get; set; }
+    public uint ScenarioId { get; set; }
+    public uint[] MovieIds { get; set; } = [];
+    public required string ImageName { get; set; }
+    public uint StampCharacterId { get; set; }
+    public uint StoreReviewSetting { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public StoryPartMst() { }
 

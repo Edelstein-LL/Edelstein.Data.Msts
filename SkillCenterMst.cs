@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class SkillCenterMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public required string DetailText { get; init; }
-    public uint[] Effects { get; init; } = [];
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public required string DetailText { get; set; }
+    public uint[] Effects { get; set; } = [];
+    public uint MasterReleaseLabelId { get; set; }
 
     public SkillCenterMst() { }
 

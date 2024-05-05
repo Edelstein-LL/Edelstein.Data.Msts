@@ -7,19 +7,19 @@ namespace Edelstein.Data.Msts;
 public class BillingProductMst : ISerializable
 {
     [Key]
-    public required string Id { get; init; }
+    public required string Id { get; set; }
 
-    public uint MasterBillingShopId { get; init; }
-    public required string ItemName { get; init; }
-    public required string ItemDetail { get; init; }
-    public BillingProductType Type { get; init; }
-    public required string Detail { get; init; }
-    public uint MasterBillingProductRewardId { get; init; }
-    public uint StartdashTime { get; init; }
-    public uint StartdashExpireTime { get; init; }
-    public int Priority { get; init; }
-    public required string SpriteName { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterBillingShopId { get; set; }
+    public required string ItemName { get; set; }
+    public required string ItemDetail { get; set; }
+    public BillingProductType Type { get; set; }
+    public required string Detail { get; set; }
+    public uint MasterBillingProductRewardId { get; set; }
+    public uint StartdashTime { get; set; }
+    public uint StartdashExpireTime { get; set; }
+    public int Priority { get; set; }
+    public required string SpriteName { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public BillingProductMst() { }
 

@@ -7,17 +7,17 @@ namespace Edelstein.Data.Msts;
 public class ChatChapterMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public uint MasterChatId { get; init; }
-    public uint RoomId { get; init; }
-    public uint ChapterId { get; init; }
-    public required string ScriptKey { get; init; }
-    public required string Title { get; init; }
-    public required string FirstLineValue { get; init; }
-    public required string NoticeValue { get; init; }
-    public required string AppearStampIdList { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public uint MasterChatId { get; set; }
+    public uint RoomId { get; set; }
+    public uint ChapterId { get; set; }
+    public required string ScriptKey { get; set; }
+    public required string Title { get; set; }
+    public required string FirstLineValue { get; set; }
+    public required string NoticeValue { get; set; }
+    public required string AppearStampIdList { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public ChatChapterMst() { }
 

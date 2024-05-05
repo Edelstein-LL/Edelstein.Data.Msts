@@ -7,10 +7,10 @@ namespace Edelstein.Data.Msts;
 public class LotteryCautionMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string CautionText { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string CautionText { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public LotteryCautionMst() { }
 

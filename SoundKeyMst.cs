@@ -7,12 +7,12 @@ namespace Edelstein.Data.Msts;
 public class SoundKeyMst : ISerializable
 {
     [Key]
-    public required string Key { get; init; }
+    public required string Key { get; set; }
 
-    public SoundType SoundType { get; init; }
-    public uint MasterSoundId { get; init; }
-    public uint MasterSoundNum { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public SoundType SoundType { get; set; }
+    public uint MasterSoundId { get; set; }
+    public uint MasterSoundNum { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public SoundKeyMst() { }
 

@@ -7,13 +7,13 @@ namespace Edelstein.Data.Msts;
 public class AdjustTrackingListMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string Name { get; init; }
-    public required string TrackingId { get; init; }
-    public TrackingType TrackingType { get; init; }
-    public required string Value { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public required string TrackingId { get; set; }
+    public TrackingType TrackingType { get; set; }
+    public required string Value { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public AdjustTrackingListMst() { }
 

@@ -7,11 +7,11 @@ namespace Edelstein.Data.Msts;
 public class SubscriptionImageMst : ISerializable
 {
     [Key]
-    public uint Id { get; init; }
+    public uint Id { get; set; }
 
-    public required string MasterBillingProductId { get; init; }
-    public required string SubscriptionImageName { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string MasterBillingProductId { get; set; }
+    public required string SubscriptionImageName { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public SubscriptionImageMst() { }
 

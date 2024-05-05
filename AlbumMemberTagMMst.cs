@@ -7,11 +7,11 @@ namespace Edelstein.Data.Msts;
 public class AlbumMemberTagMMst : ISerializable
 {
     [Key]
-    public uint MemberTagId { get; init; }
+    public uint MemberTagId { get; set; }
 
-    public required string Name { get; init; }
-    public required string ImgAsset { get; init; }
-    public uint MasterReleaseLabelId { get; init; }
+    public required string Name { get; set; }
+    public required string ImgAsset { get; set; }
+    public uint MasterReleaseLabelId { get; set; }
 
     public AlbumMemberTagMMst() { }
 
