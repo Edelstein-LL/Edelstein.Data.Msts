@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class LiveBoostMst : ISerializable
+public class LiveBoostMst : IGameMst, ISerializable
 {
     [Key]
     public int Value { get; set; }

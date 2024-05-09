@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(EventLiveName))]
-public class EventTypeMst : ISerializable
+public class EventTypeMst : IGameMst, ISerializable
 {
     public EventType Type { get; set; }
     public required string EventLiveName { get; set; }

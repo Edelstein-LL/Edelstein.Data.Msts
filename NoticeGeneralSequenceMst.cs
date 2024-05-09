@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class NoticeGeneralSequenceMst : ISerializable
+public class NoticeGeneralSequenceMst : IGameMst, ISerializable
 {
     [Key]
     public uint MasterNoticeGeneralId { get; set; }

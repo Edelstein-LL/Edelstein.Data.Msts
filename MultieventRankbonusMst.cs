@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(PlayerCount), nameof(LiveRank), nameof(EventPtBonus))]
-public class MultieventRankbonusMst : ISerializable
+public class MultieventRankbonusMst : IGameMst, ISerializable
 {
     public uint PlayerCount { get; set; }
     public uint LiveRank { get; set; }

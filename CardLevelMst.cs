@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(Id), nameof(Level))]
-public class CardLevelMst : ISerializable
+public class CardLevelMst : IGameMst, ISerializable
 {
     public uint Id { get; set; }
     public int Level { get; set; }

@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class EvolveItemConditionMst : ISerializable
+public class EvolveItemConditionMst : IGameMst, ISerializable
 {
     [Key]
     public uint MasterItemId { get; set; }

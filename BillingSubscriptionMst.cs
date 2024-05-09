@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class BillingSubscriptionMst : ISerializable
+public class BillingSubscriptionMst : IGameMst, ISerializable
 {
     [Key]
     public required string MasterBillingProductId { get; set; }

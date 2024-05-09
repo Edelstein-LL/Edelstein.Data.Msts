@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(UnitTypeId), nameof(MemberTagId))]
-public class AlbumUnitTypeMemberTagMMst : ISerializable
+public class AlbumUnitTypeMemberTagMMst : IGameMst, ISerializable
 {
     public uint UnitTypeId { get; set; }
     public uint MemberTagId { get; set; }

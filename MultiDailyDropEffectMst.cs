@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class MultiDailyDropEffectMst : ISerializable
+public class MultiDailyDropEffectMst : IGameMst, ISerializable
 {
     [Key]
     public required string Name { get; set; }

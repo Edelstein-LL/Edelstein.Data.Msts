@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(CharacterId), nameof(GroupId))]
-public class CharacterGroupMst : ISerializable
+public class CharacterGroupMst : IGameMst, ISerializable
 {
     public uint CharacterId { get; set; }
     public uint GroupId { get; set; }

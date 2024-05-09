@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(MasterEventId), nameof(TargetId))]
-public class EventCardBonusMst : ISerializable
+public class EventCardBonusMst : IGameMst, ISerializable
 {
     public uint MasterEventId { get; set; }
     public uint TargetId { get; set; }

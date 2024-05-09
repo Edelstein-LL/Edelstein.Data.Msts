@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class ExchangeItemMst : ISerializable
+public class ExchangeItemMst : IGameMst, ISerializable
 {
     [Key]
     public uint Id { get; set; }

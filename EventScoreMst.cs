@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class EventScoreMst : ISerializable
+public class EventScoreMst : IGameMst, ISerializable
 {
     [Key]
     public uint MasterEventId { get; set; }

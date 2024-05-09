@@ -7,7 +7,7 @@ namespace Edelstein.Data.Msts;
 [Serializable]
 [PrimaryKey(nameof(Id), nameof(Number))]
 [Index(nameof(Id))]
-public class LotteryItemMst : ISerializable
+public class LotteryItemMst : IGameMst, ISerializable
 {
     public uint Id { get; set; }
     public uint Number { get; set; }

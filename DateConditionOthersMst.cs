@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(Id), nameof(Num))]
-public class DateConditionOthersMst : ISerializable
+public class DateConditionOthersMst : IGameMst, ISerializable
 {
     public uint Id { get; set; }
     public uint Num { get; set; }

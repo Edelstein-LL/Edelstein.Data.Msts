@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class MultieventPenaltyMst : ISerializable
+public class MultieventPenaltyMst : IGameMst, ISerializable
 {
     [Key]
     public uint PenaltyCount { get; set; }

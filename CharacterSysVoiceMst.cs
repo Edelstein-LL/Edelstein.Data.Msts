@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(Id), nameof(MasterCharacterId), nameof(MasterVoiceId))]
-public class CharacterSysVoiceMst : ISerializable
+public class CharacterSysVoiceMst : IGameMst, ISerializable
 {
     public uint Id { get; set; }
     public uint Num { get; set; }

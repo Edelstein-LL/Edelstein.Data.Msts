@@ -7,7 +7,7 @@ namespace Edelstein.Data.Msts;
 [Serializable]
 [PrimaryKey(nameof(MasterMusicId), nameof(Level))]
 [Index(nameof(MasterMusicId))]
-public class MusicLevelMst : ISerializable
+public class MusicLevelMst : IGameMst, ISerializable
 {
     public uint MasterMusicId { get; set; }
     public LiveLevel Level { get; set; }

@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class ResultCodeMst : ISerializable
+public class ResultCodeMst : IGameMst, ISerializable
 {
     [Key]
     public ResultCode ResultCode { get; set; }

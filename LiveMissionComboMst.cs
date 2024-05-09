@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class LiveMissionComboMst : ISerializable
+public class LiveMissionComboMst : IGameMst, ISerializable
 {
     [Key]
     public uint MasterMusicId { get; set; }

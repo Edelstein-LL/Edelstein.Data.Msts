@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class FunctionLockMst : ISerializable
+public class FunctionLockMst : IGameMst, ISerializable
 {
     [Key]
     public required string Id { get; set; }

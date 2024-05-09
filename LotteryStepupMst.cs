@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class LotteryStepupMst : ISerializable
+public class LotteryStepupMst : IGameMst, ISerializable
 {
     [Key]
     public uint MasterLotteryId { get; set; }

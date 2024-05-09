@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class SkillCenterEffectMst : ISerializable
+public class SkillCenterEffectMst : IGameMst, ISerializable
 {
     [Key]
     public uint Id { get; set; }

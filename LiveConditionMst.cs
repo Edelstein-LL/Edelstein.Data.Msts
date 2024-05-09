@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class LiveConditionMst : ISerializable
+public class LiveConditionMst : IGameMst, ISerializable
 {
     [Key]
     public uint MasterLiveId { get; set; }

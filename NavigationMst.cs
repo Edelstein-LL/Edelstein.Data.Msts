@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class NavigationMst : ISerializable
+public class NavigationMst : IGameMst, ISerializable
 {
     [Key]
     public required string Id { get; set; }

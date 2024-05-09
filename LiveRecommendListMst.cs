@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(MasterLiveRecommendId), nameof(Number))]
-public class LiveRecommendListMst : ISerializable
+public class LiveRecommendListMst : IGameMst, ISerializable
 {
     public uint MasterLiveRecommendId { get; set; }
     public uint Number { get; set; }

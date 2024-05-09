@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class StoryReleaseMst : ISerializable
+public class StoryReleaseMst : IGameMst, ISerializable
 {
     [Key]
     public uint MasterStoryPartId { get; set; }

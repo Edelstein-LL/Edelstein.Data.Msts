@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(Rarity), nameof(EvolveCount))]
-public class CardEvolveMst : ISerializable
+public class CardEvolveMst : IGameMst, ISerializable
 {
     public Rarity Rarity { get; set; }
     public int EvolveCount { get; set; }

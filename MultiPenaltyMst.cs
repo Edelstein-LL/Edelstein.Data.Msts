@@ -4,10 +4,12 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class MultiPenaltyMst : ISerializable
+public class MultiPenaltyMst : IGameMst, ISerializable
 {
     [Key]
     public byte Id { get; set; } // TODO: Dummy
+
+    public uint MasterReleaseLabelId { get; set; }
 
     public MultiPenaltyMst() { }
 

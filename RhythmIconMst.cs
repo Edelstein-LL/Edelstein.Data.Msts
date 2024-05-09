@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class RhythmIconMst : ISerializable
+public class RhythmIconMst : IGameMst, ISerializable
 {
     [Key]
     public uint Id { get; set; }

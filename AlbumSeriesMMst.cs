@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class AlbumSeriesMMst : ISerializable
+public class AlbumSeriesMMst : IGameMst, ISerializable
 {
     [Key]
     public uint AlbumSeriesId { get; set; }

@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(MasterLoginBonusId), nameof(DayCount))]
-public class LoginBonusRewardSettingMst : ISerializable
+public class LoginBonusRewardSettingMst : IGameMst, ISerializable
 {
     public uint MasterLoginBonusId { get; set; }
     public int DayCount { get; set; }

@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class EvolveItemAmountMst : ISerializable
+public class EvolveItemAmountMst : IGameMst, ISerializable
 {
     [Key]
     public Rarity Rarity { get; set; }

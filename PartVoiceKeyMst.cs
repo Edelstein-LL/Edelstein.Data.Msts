@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class PartVoiceKeyMst : ISerializable
+public class PartVoiceKeyMst : IGameMst, ISerializable
 {
     [Key]
     public required string Key { get; set; }

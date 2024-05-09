@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class LiveInputResultMst : ISerializable
+public class LiveInputResultMst : IGameMst, ISerializable
 {
     [Key]
     public InputResultType Type { get; set; }

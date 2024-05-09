@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(Id), nameof(BandCategory))]
-public class LotteryEffMovieMst : ISerializable
+public class LotteryEffMovieMst : IGameMst, ISerializable
 {
     public uint Id { get; set; }
     public BandCategory BandCategory { get; set; }

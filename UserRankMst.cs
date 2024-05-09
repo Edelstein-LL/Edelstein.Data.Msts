@@ -7,7 +7,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [Index(nameof(Exp))]
-public class UserRankMst : ISerializable
+public class UserRankMst : IGameMst, ISerializable
 {
     [Key]
     public int Rank { get; set; }

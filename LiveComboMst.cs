@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class LiveComboMst : ISerializable
+public class LiveComboMst : IGameMst, ISerializable
 {
     [Key]
     public int ComboNum { get; set; }

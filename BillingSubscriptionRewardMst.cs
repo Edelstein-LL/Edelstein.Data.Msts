@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(MasterBillingSubscriptionLabel), nameof(Number))]
-public class BillingSubscriptionRewardMst : ISerializable
+public class BillingSubscriptionRewardMst : IGameMst, ISerializable
 {
     public required string MasterBillingSubscriptionLabel { get; set; }
     public uint Number { get; set; }

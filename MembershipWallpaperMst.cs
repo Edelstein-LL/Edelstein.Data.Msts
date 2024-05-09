@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class MembershipWallpaperMst : ISerializable
+public class MembershipWallpaperMst : IGameMst, ISerializable
 {
     [Key]
     public uint Id { get; set; }

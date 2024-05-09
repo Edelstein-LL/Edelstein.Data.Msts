@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-public class CardGetMst : ISerializable
+public class CardGetMst : IGameMst, ISerializable
 {
     [Key]
     public uint MasterCardId { get; set; }

@@ -6,7 +6,7 @@ namespace Edelstein.Data.Msts;
 
 [Serializable]
 [PrimaryKey(nameof(MasterNavigationId), nameof(SpriteName))]
-public class NavigationDialogPageMst : ISerializable
+public class NavigationDialogPageMst : IGameMst, ISerializable
 {
     public required string MasterNavigationId { get; set; }
     public required string SpriteName { get; set; }
