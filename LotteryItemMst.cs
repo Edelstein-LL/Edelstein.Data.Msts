@@ -1,12 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(Id), nameof(Number))]
-[Index(nameof(Id))]
 public class LotteryItemMst : IGameMst, ISerializable
 {
     public uint Id { get; set; }

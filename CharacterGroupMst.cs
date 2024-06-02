@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(CharacterId), nameof(GroupId))]
 public class CharacterGroupMst : IGameMst, ISerializable
 {
     public uint CharacterId { get; set; }

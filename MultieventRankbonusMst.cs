@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(PlayerCount), nameof(LiveRank), nameof(EventPtBonus))]
 public class MultieventRankbonusMst : IGameMst, ISerializable
 {
     public uint PlayerCount { get; set; }

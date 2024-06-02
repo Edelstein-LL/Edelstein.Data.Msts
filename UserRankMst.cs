@@ -1,15 +1,10 @@
-using Microsoft.EntityFrameworkCore;
-
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[Index(nameof(Exp))]
 public class UserRankMst : IGameMst, ISerializable
 {
-    [Key]
     public int Rank { get; set; }
 
     public int Exp { get; set; }

@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(Id), nameof(Level))]
 public class StarEventLevelRewardSettingMst : IGameMst, ISerializable
 {
     public uint Id { get; set; }

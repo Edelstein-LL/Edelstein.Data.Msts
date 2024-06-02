@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(MasterEventId), nameof(MasterGachaId))]
 public class EventTopBannerMst : IGameMst, ISerializable
 {
     public uint MasterEventId { get; set; }

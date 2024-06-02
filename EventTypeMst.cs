@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(EventLiveName))]
 public class EventTypeMst : IGameMst, ISerializable
 {
     public EventType Type { get; set; }

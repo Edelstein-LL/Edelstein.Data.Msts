@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(Id), nameof(LiveMode), nameof(ScoreRank))]
 public class LiveRewardSettingMst : IGameMst, ISerializable
 {
     public uint Id { get; set; }

@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(MasterBillingSubscriptionLabel), nameof(Number))]
 public class BillingSubscriptionRewardMst : IGameMst, ISerializable
 {
     public required string MasterBillingSubscriptionLabel { get; set; }

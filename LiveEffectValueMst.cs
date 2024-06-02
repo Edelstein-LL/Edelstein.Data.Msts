@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
@@ -6,7 +5,6 @@ namespace Edelstein.Data.Msts;
 [Serializable]
 public class LiveEffectValueMst : IGameMst, ISerializable
 {
-    [Key]
     public int Id { get; set; }
 
     public required string EffectObjectName { get; set; }

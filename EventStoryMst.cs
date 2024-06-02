@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(MasterEventId), nameof(MasterStoryId))]
 public class EventStoryMst : IGameMst, ISerializable
 {
     public uint MasterEventId { get; set; }

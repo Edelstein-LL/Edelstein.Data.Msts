@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
@@ -6,7 +5,6 @@ namespace Edelstein.Data.Msts;
 [Serializable]
 public class ConstMst : IGameMst, ISerializable
 {
-    [Key]
     public required string Id { get; set; }
 
     public required string Value { get; set; }

@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(MasterNavigationId), nameof(SpriteName))]
 public class NavigationDialogPageMst : IGameMst, ISerializable
 {
     public required string MasterNavigationId { get; set; }

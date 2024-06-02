@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(Id), nameof(BandCategory))]
 public class LotteryEffMovieMst : IGameMst, ISerializable
 {
     public uint Id { get; set; }

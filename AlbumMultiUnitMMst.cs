@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(MultiUnitId), nameof(UnitId))]
 public class AlbumMultiUnitMMst : IGameMst, ISerializable
 {
     public uint MultiUnitId { get; set; }

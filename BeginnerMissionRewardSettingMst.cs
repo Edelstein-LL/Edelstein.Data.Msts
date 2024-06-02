@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
 
 [Serializable]
-[PrimaryKey(nameof(MasterBeginnerMissionId), nameof(Level), nameof(Number))]
 public class BeginnerMissionRewardSettingMst : IGameMst, ISerializable
 {
     public uint MasterBeginnerMissionId { get; set; }

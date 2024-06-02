@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
@@ -6,7 +5,6 @@ namespace Edelstein.Data.Msts;
 [Serializable]
 public class ChipsterResultCodeMst : IGameMst, ISerializable
 {
-    [Key]
     public int ResultCode { get; set; }
 
     public required string MasterDialogId { get; set; }

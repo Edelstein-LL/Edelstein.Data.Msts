@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
@@ -6,7 +5,6 @@ namespace Edelstein.Data.Msts;
 [Serializable]
 public class NoticeGeneralSequenceMst : IGameMst, ISerializable
 {
-    [Key]
     public uint MasterNoticeGeneralId { get; set; }
 
     public uint Order { get; set; }
