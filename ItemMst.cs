@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
@@ -5,6 +6,8 @@ namespace Edelstein.Data.Msts;
 [Serializable]
 public class ItemMst : IGameMst, ISerializable
 {
+    private const string DateTimeFormat = "yyyy/MM/dd H:mm:ss";
+
     public uint Id { get; set; }
 
     public required string Name { get; set; }
@@ -20,7 +23,7 @@ public class ItemMst : IGameMst, ISerializable
     public required string SpriteName { get; set; }
     public ItemTab ItemTab { get; set; }
     public int Priority { get; set; }
-    public required string ExpireDate { get; set; }
+    public DateTimeOffset? ExpiryDate { get; set; }
     public ItemExpireType ItemExpireType { get; set; }
     public uint MasterReleaseLabelId { get; set; }
 
@@ -42,7 +45,12 @@ public class ItemMst : IGameMst, ISerializable
         SpriteName = info.GetString("_spriteName")!;
         ItemTab = (ItemTab)info.GetValue("_itemTab", typeof(ItemTab))!;
         Priority = info.GetInt32("_priority");
-        ExpireDate = info.GetString("_expireDate")!;
+
+        string? expiryDate = info.GetString("_expireDate");
+        ExpiryDate = !String.IsNullOrEmpty(expiryDate)
+            ? DateTimeOffset.ParseExact(expiryDate, DateTimeFormat, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal)
+            : null;
+
         ItemExpireType = (ItemExpireType)info.GetValue("_itemExpireType", typeof(ItemExpireType))!;
         MasterReleaseLabelId = info.GetUInt32("_masterReleaseLabelId");
     }
@@ -63,7 +71,9 @@ public class ItemMst : IGameMst, ISerializable
         info.AddValue("_spriteName", SpriteName);
         info.AddValue("_itemTab", ItemTab);
         info.AddValue("_priority", Priority);
-        info.AddValue("_expireDate", ExpireDate);
+
+        info.AddValue("_expireDate", ExpiryDate?.ToString(DateTimeFormat));
+
         info.AddValue("_itemExpireType", ItemExpireType);
         info.AddValue("_masterReleaseLabelId", MasterReleaseLabelId);
     }

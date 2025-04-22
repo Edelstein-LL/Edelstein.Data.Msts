@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Runtime.Serialization;
 
 namespace Edelstein.Data.Msts;
@@ -5,6 +6,8 @@ namespace Edelstein.Data.Msts;
 [Serializable]
 public class StoryReleaseMst : IGameMst, ISerializable
 {
+    private const string DateTimeFormat = "yyyy/MM/dd H:mm:ss";
+
     public uint MasterStoryPartId { get; set; }
 
     public int UserRank { get; set; }
@@ -13,7 +16,7 @@ public class StoryReleaseMst : IGameMst, ISerializable
     public uint LiveScore { get; set; }
     public uint MasterMissionId { get; set; }
     public int EventPoint { get; set; }
-    public required string OpenedAtAfterEvent { get; set; }
+    public DateTimeOffset? OpenedAtAfterEvent { get; set; }
     public uint MasterReleaseLabelId { get; set; }
 
     public StoryReleaseMst() { }
@@ -27,7 +30,12 @@ public class StoryReleaseMst : IGameMst, ISerializable
         LiveScore = info.GetUInt32("_liveScore");
         MasterMissionId = info.GetUInt32("_masterMissionId");
         EventPoint = info.GetInt32("_eventPoint");
-        OpenedAtAfterEvent = info.GetString("_openedAtAfterEvent")!;
+
+        string? openedAtAfterEvent = info.GetString("_openedAtAfterEvent");
+        OpenedAtAfterEvent = !String.IsNullOrEmpty(openedAtAfterEvent)
+            ? DateTimeOffset.ParseExact(openedAtAfterEvent, DateTimeFormat, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal)
+            : null;
+
         MasterReleaseLabelId = info.GetUInt32("_masterReleaseLabelId");
     }
 
@@ -40,7 +48,7 @@ public class StoryReleaseMst : IGameMst, ISerializable
         info.AddValue("_liveScore", LiveScore);
         info.AddValue("_masterMissionId", MasterMissionId);
         info.AddValue("_eventPoint", EventPoint);
-        info.AddValue("_openedAtAfterEvent", OpenedAtAfterEvent);
+        info.AddValue("_openedAtAfterEvent", OpenedAtAfterEvent?.ToString(DateTimeFormat));
         info.AddValue("_masterReleaseLabelId", MasterReleaseLabelId);
     }
 }
