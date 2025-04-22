@@ -23,7 +23,7 @@ public class ItemMst : IGameMst, ISerializable
     public required string SpriteName { get; set; }
     public ItemTab ItemTab { get; set; }
     public int Priority { get; set; }
-    public DateTimeOffset? ExpiryDate { get; set; }
+    public DateTimeOffset? ExpireDate { get; set; }
     public ItemExpireType ItemExpireType { get; set; }
     public uint MasterReleaseLabelId { get; set; }
 
@@ -47,7 +47,7 @@ public class ItemMst : IGameMst, ISerializable
         Priority = info.GetInt32("_priority");
 
         string? expiryDate = info.GetString("_expireDate");
-        ExpiryDate = !String.IsNullOrEmpty(expiryDate)
+        ExpireDate = !String.IsNullOrEmpty(expiryDate)
             ? DateTimeOffset.ParseExact(expiryDate, DateTimeFormat, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal)
             : null;
 
@@ -72,7 +72,7 @@ public class ItemMst : IGameMst, ISerializable
         info.AddValue("_itemTab", ItemTab);
         info.AddValue("_priority", Priority);
 
-        info.AddValue("_expireDate", ExpiryDate?.ToString(DateTimeFormat));
+        info.AddValue("_expireDate", ExpireDate?.ToString(DateTimeFormat));
 
         info.AddValue("_itemExpireType", ItemExpireType);
         info.AddValue("_masterReleaseLabelId", MasterReleaseLabelId);
