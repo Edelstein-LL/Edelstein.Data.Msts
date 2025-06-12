@@ -36,6 +36,23 @@ public class ReleaseLabelMst : ISerializable
             : null;
     }
 
+    public bool IsOpen(DateTimeOffset? currentDateTimeOffset)
+    {
+        if (ReleaseStatus != 1)
+            return false;
+
+        if (OpenedAt.HasValue)
+        {
+            if (!(OpenedAt <= currentDateTimeOffset))
+                return false;
+        }
+
+        if (ClosedAt.HasValue)
+            return ClosedAt > currentDateTimeOffset;
+
+        return true;
+    }
+
     public void GetObjectData(SerializationInfo info, StreamingContext context)
     {
         info.AddValue("_id", Id);
